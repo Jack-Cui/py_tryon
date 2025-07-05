@@ -551,6 +551,7 @@ if __name__ == "__main__":
     insToken, ws_url = schedule(user_id, room_id)
     print('insToken:', insToken, 'user_id:', user_id, 'room_id:', room_id)
     asyncio.get_event_loop().run_until_complete(send_login_request(account, access_token, insToken, room_id, enter_stage_info, ws_url))
+    print("*" * 50 + "登台成功" + "*" * 50)
     
     # # 获取房间数据
     # room_id = 1897191226568142849  # 使用相同的房间ID
