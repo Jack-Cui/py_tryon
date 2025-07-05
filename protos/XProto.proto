@@ -1,0 +1,764 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+
+option go_package = "./proto3";  // 指定 Go 代码的导入路径
+
+extend google.protobuf.MessageOptions {
+    optional eClientPID e_client_p_i_d = 50001;
+    optional eServerPID e_server_p_i_d = 50002;
+}
+
+enum eError {
+    UNKNOWN = 0;
+    SUCCESS = 1;
+    FAILD = 2;
+    ERROR_REQ_PARAM = 41;       //请求的参数有误
+    ERROR_OTHER_ROOM_OPEN = 42; //本实例已经开着其他房间了
+    ERROR_CREATE_ROOM_FAIL = 43;//创建房间失败
+    ERROR_ENTER_ROOM_FAIL = 44; //进入房间失败
+    EMPTY_INS_TOKEN = 51; //未传递insken
+    UNSET_INS_TOKEN = 52; //未设置insken
+    ERROR_INS_TOKEN = 53; //不匹配insken
+    ERROR_APP_SERVER_CONNECT_FAIL   = 61; //APP后台连接不上
+    ERROR_APP_SERVER_RET_NOT_200    = 62; //APP后台返回httpCode非200
+    ERROR_APP_SERVER_RET_NOT_JSON   = 63; //APP后台返回的json格式不匹配
+    ERROR_APP_SERVER_RET_AUTH_FAIL  = 64; //APP后台返回认证失败
+    ERROR_APP_SERVER_RET_CODE_FAIL  = 65; //APP后台返回code失败
+    ERROR_NO_ROOM = 71;             //没有房间
+    ERROR_NOT_IN_ROOM = 72;         //不在房间内
+    ERROR_ALREADY_IN_STAGE = 73;    //已经在小窗里了
+    ERROR_ALREADY_IN_QUEUE = 74;    //已经在排队了
+    ERROR_ENTER_STAGE_FAIL = 75;    //上台失败
+    ERROR_ENTER_STAGE_TIMEOUT = 76; //上台超时
+    ERROR_NOT_IN_STAGE = 77;        //不在小窗里
+    ERROR_INVITER_NOT_IN_UE         = 80; //邀请者不在UE中
+    ERROR_INVITEE_NOT_IN_STAGE      = 81; //被邀请者不在小窗
+    ERROR_INVITE_CONTEXT_NOT_EXIST  = 82; //邀请上下文不存在(很可能是已经过期了)
+    ERROR_INVITEE_NOT_YOU           = 83; //没有邀请过你
+}
+
+// app与服务器间上行c2s消息定义（依靠EntranceServer接入）
+enum eClientPID {
+    NOT_USE_CID                     = 0;
+
+    // 未用
+    ClientHeartBeat                 = 1;
+
+    // app发起登录请求（服务器需要去app后台验证token，顶号处理等）
+    LoginReq                        = 101;
+
+    // app发起进入房间请求
+    EnterRoomReq                    = 201;
+    // app发起离开房间请求（如果上台也自动下台、释放资源）
+    LeaveRoomReq                    = 203;
+    // app发起解散房间请求
+    DissolveRoomReq                 = 301;
+    // app发起退出房间请求（仅退出）
+    QuitRoomReq                     = 302;
+
+    // app发起踢人请求
+    KickUserOutRoom                 = 303;
+
+    // app发起修改房间名字请求
+    ChangeRoomNameReq               = 311;
+
+    // app发起静音请求
+    MuteUserReq                     = 321;
+
+    // app发起设置房间舞台数请求
+    RoomSetMaxStageCountReq         = 331;
+
+    // LogFromClient
+    ClientLogReq					= 500;
+    // app发起设上台请求（会分配ue资源，无资源则排队等待）
+    EnterStageReq                   = 501;
+    // app发起下台请求
+    LeaveStageReq                   = 503;
+    // app发起离开队列请求
+    LeaveQueueReq                   = 506;
+    // app发起离开UE请求(小退)
+    LeaveUeReq                      = 509;
+    // app发起: 再次上台请求(在小窗中,且小退过)
+    ReEnterStageReq                 = 510;
+    // app发起: 更新上台的context
+    UpdateEnterStageContextReq      = 511;
+    // 发起"多人协同动作邀请"
+    MultiActionReq                  = 512;
+    // 回复"多人协同动作"邀请
+    MultiActionReply                = 516;
+
+    // 未用（或app与ue间透传？）
+    PlayAnimationReq                = 1001;
+    ChangeGarmentReq                = 1002;
+    TouchScreenReq                  = 1003;
+    ChangeGarmentSizeReq            = 1004;
+    QueryCurrencyReq                = 1005;
+    ChangeRtcStateReq               = 1006;
+    LatencyReq					            = 1007;
+    ChangeMapReq                    = 1008;
+    HeatMapReq                      = 1009;                             //热力图
+
+    // 客户端主动发起的心跳
+    HeartBeatReq                    = 1111;
+}
+
+// app与服务器间下行s2s消息定义（依靠EntranceServer接入）
+enum eServerPID {
+    NOT_USE_SID                     = 0;
+
+    // 服务器下行的心跳
+    ServerHeartBeat                 = 1001;
+
+    // 服务器下行的登录响应
+    LoginAsw                        = 1101;
+    // 顶号(提示用户: 您的账号在其他地方登录)
+    LoginOtherPush                  = 1105;
+
+    // 场景变更
+    SceneChangePush                 = 1109;
+
+    // 服务器回复的心跳消息
+    HeartBeatAsw                    = 1111;
+
+    // 服务器下行的进房响应
+    EnterRoomAsw                    = 1201;
+    // 服务器下行的进房广播
+    EnterRoomPush                   = 1202;
+
+    // 服务器下行的离房响应
+    LeaveRoomAsw                    = 1203;
+    // 服务器下行的离房广播
+    LeaveRoomPush                   = 1204;
+
+    // 服务器下行的解散房间响应
+    DissolveRoomAsw                 = 1205;
+    // 服务器下行的解散房间广播
+    DissolveRoomPush                = 1206;
+
+    // 服务器下行的退出房间响应
+    QuitRoomAsw                     = 1207;
+    // 服务器下行的退出房间广播
+    QuitRoomPush                    = 1208;
+
+    // 服务器下行的被踢通知
+    KickUserOutRoomPush             = 1209;
+    // 服务器下行: 踢人成败(专门回复给踢人者)
+    KickUserOutRoomAsw              = 1303;
+
+    // 服务器下行的房间改名响应
+    ChangeRoomNameAsw               = 1311;
+    // 服务器下行的房间改名广播
+    ChangeRoomNamePush              = 1312;
+
+    // 服务器下行的静音响应
+    MuteUserAsw                     = 1321;
+    // 服务器下行的静音广播
+    MuteUserPush                    = 1322;
+
+    // 服务器下行的设置舞台数响应
+    RoomSetMaxStageCountAsw         = 1331;
+    // 服务器下行的设置舞台数广播
+    RoomSetMaxStageCountPush        = 1332;
+
+    // 服务器下行的上台响应
+    EnterStageAsw                   = 1501;
+    // 服务器下行的上台广播
+    EnterStagePush                  = 1502;
+
+    // 服务器下行的下台响应
+    LeaveStageAsw                   = 1503;
+    // 服务器下行的下台广播
+    LeaveStagePush                  = 1504;
+
+    // 服务器下行的上台被排队通知
+    StageQueueInfoPush              = 1505;
+
+    // 服务器下行的离开队列响应
+    LeaveQueueAsw                   = 1506;
+    // 服务器下行: 被踢出小窗
+    KickOutStagePush                = 1507;
+    // 服务器下行: app发起离开UE请求(小退)的响应
+    LeaveUeAsw                      = 1509;
+    // 服务器下行: 更新上台的context的响应
+    UpdateEnterStageContextAsw      = 1511;
+    // 服务器下行: 回复"多人协同动作邀请"
+    MultiActionAsw                  = 1512;
+    // 服务器下行: 邀请"多人协同动作"
+    MultiActionInvitePush           = 1515;
+    // 服务器下行: 回复"多人协同动作"邀请的结果
+    MultiActionReplyAsw             = 1516;
+    // 服务器下行: 推送给邀请方,其他人是否同意
+    MultiActionReplyResult          = 1517;
+
+    // 服务器下行: 用户离开UE,通知除本人以外的其他人
+    LeaveUePush                     = 1521;
+    // 服务器下行: 在stageType变成StageTypeTryEnter时,通知该客户端
+    StageStatusChangePush           = 1522;
+
+    // 未用（或app与ue间透传？）
+    PlayAnimationPush               = 11001;
+    ChangeGarmentPush               = 11002;
+    TouchScreenPush                 = 11003;
+    QueryCurrencyPush               = 11004;
+    ChangeRtcStatePush              = 11005;
+    KickUserOutStagePush            = 11006;
+    LatencyPush					            = 11007;
+    ChangeMapPush                   = 11008;
+    HeatMapPush                     = 11009;                                //占位
+}
+
+// 客户端主动发起的心跳
+message oHeartBeatReq{
+    option (e_client_p_i_d) = HeartBeatReq;
+    int64 timestamp = 1; //时间戳
+}
+// 服务器回复的心跳消息
+message oHeartBeatAsw{
+    option (e_server_p_i_d) = HeartBeatAsw;
+    int64 timestamp = 1; //之前client发来的时间戳
+}
+
+message oClientLogReq{
+    string log = 1;
+}
+
+message oClientHeartBeat{
+    uint64 seq = 1;
+    uint64 cTimestamp = 2;
+    uint64 uid = 3;
+    uint64 room = 4;
+    uint64 delay = 5;
+}
+
+message oCustomInfo{
+    uint64 type = 1;
+    uint64 uid = 2;
+    uint64 room = 3;
+    uint64 stage = 4;
+}
+
+message oServerHeartBeat{
+    uint64 seq = 1;
+    uint64 cTimestamp = 2;
+    uint64 sTimestamp = 3;
+    uint64 uid = 4;
+    uint64 room = 5;
+}
+
+message oLoginReq {
+    option (e_client_p_i_d) = LoginReq;
+
+    uint64 account = 2;
+    string token = 3;
+    string insToken = 4; // APP向调度后台请求分配实例时,回复给APP的token,用于登录XEngine时验证
+}
+
+message oLoginAsw {
+    option (e_server_p_i_d) = LoginAsw;
+    eError code = 1;
+}
+
+message oLoginOtherPush {
+    option (e_server_p_i_d) = LoginOtherPush;
+}
+
+// 场景变更
+message oSceneChangePush {
+    option (e_server_p_i_d) = SceneChangePush;
+    string scene = 1; //场景
+}
+
+message oPlayAnimatonReq {
+    int32 animId            = 1;
+    float playRate          = 2;
+    bool isLoop             = 3;
+}
+
+message oPlayAnimationPush {
+    eError code             = 1;
+    int32 animId            = 2;
+    float playRate          = 3;
+    bool isLoop             = 4;
+}
+
+message oChangeGarmentReq {
+    int64 garment1Id         = 1; //inner,optional
+    int64 garment2Id         = 2; //medium,optional
+    int64 garment3Id         = 3; //outer,optional
+    int32 garment1Size       = 4;
+    int32 garment2Size       = 5;
+    int32 garment3Size       = 6;
+}
+
+message oChangeGarmentSizeReq{
+    int32 size              = 1;
+}
+
+enum ePaymenType{
+    None                    = 0;
+    RtcVideo                = 1;
+    RtcVoice                = 2;
+    PlayAnimation           = 3;
+}
+
+message oQueryCurrencyReq{
+    ePaymenType paymentType       = 1;
+}
+
+enum eRtcType{
+    NoType               = 0;
+    Video                = 1;
+    Voice                = 2;
+}
+
+message oHeatMapReq{
+    bool enable             = 1;                                //开/关热力图
+}
+
+message oChangeRtcStateReq{
+    eRtcType type           = 1;
+    bool isOn               = 2;
+}
+
+message oChangeMapReq {
+    string mapName          = 1;
+}
+
+message oChangeRtcStatePush{
+    eError code            = 1;
+    eRtcType type          = 2;
+    bool isOn              = 3;
+}
+
+message oQueryCurrencyPush{
+    eError code             = 1;
+    double Currency         = 2;
+    ePaymenType paymentType = 3;
+    float unitPrice         = 4;
+}
+
+enum eKickUserOutStageReason{
+    Exit                    = 0;
+    OutOfCurrency           = 1;
+}
+
+message oKickUserOutStagePush{
+    eKickUserOutStageReason kickReason  = 1;
+    uint64 userid                       = 2;
+    float countdown                     = 4;
+}
+
+message oChangeMapPush{
+    eError code             = 1;
+    string mapName          = 2;
+}
+
+message oGarment {
+    int64 id                    = 1;
+    string name                 = 2;
+    string icon                 = 3;
+}
+
+message oChangeGarmentPush {
+    eError code                     = 1;
+    oGarment garment1               = 2;
+    oGarment garment2               = 3;
+    oGarment garment3               = 4;
+}
+
+message oLatencyReq {
+    uint64 timestamp                = 1;
+}
+
+message oLatencyPush {
+    uint64 timestamp                = 1;
+}
+
+enum eTouchType {
+    click = 0;
+    rotate = 1;
+    scale = 2;
+}
+
+message oVector3 {
+    float x                 = 1;
+    float y                 = 2;
+    float z                 = 3;
+}
+
+message oTouchScreenReq {
+    eTouchType touchType          = 1;
+    oVector3 pos                  = 2;
+    uint64 timestamp              = 3;
+}
+
+message oTouchScreenPush {
+    uint64 timestamp                = 1;
+    float latency                   = 2;    //touch screen latency in ue
+}
+
+/*
+    EnterRoomReq                    = 201;
+    LeaveRoomReq                    = 203;
+
+    EnterRoomAsw                    = 1201;
+    EnterRoomPush                   = 1202;
+    LeaveRoomAsw                    = 1203;
+    LeaveRoomPush                   = 1204;
+*/
+
+message oEnterRoomReq {
+    option (e_client_p_i_d) = EnterRoomReq;
+    uint64 roomId = 1;
+}
+
+//舞台状态
+enum eStageType {
+    StageTypeFree = 0;      //空
+    StageTypeWaitEnter = 1; //等待上台
+    StageTypeTryEnter = 2;  //已申请上台(等待UE回复)
+    StageTypeWorking = 3;   //在台上展示中
+    StageTypeOff = 4;       //已下台(计算闲置超时)
+}
+
+message oStageInfo {
+    int64 stageId = 1; //舞台ID(从0开始),不在舞台上用-1表示
+    uint64 onStageUserId = 2;
+    string rtcToken = 3;
+    eStageType stageType = 4; //舞台状态
+}
+
+message oEnterRoomAsw {
+    option (e_server_p_i_d) = EnterRoomAsw;
+    eError code = 1;
+    uint64 roomId = 2;
+    repeated uint64 onlineUsers = 3;
+    string rtcToken = 4;
+    repeated oStageInfo stageRtcIds = 5;  //台上的user数组
+    repeated oStageInfo queueUserIds = 6; //排队的user数组
+    int32 stageCount = 7;   //舞台数量
+    string scene = 8; //场景
+    bool allMute = 9; //是否全员禁言
+    repeated uint64 muteUsers = 10; //被禁言的用户ID列表
+}
+
+message oEnterRoomPush {
+    option (e_server_p_i_d) = EnterRoomPush;
+    uint64 enterUserId = 1;
+}
+
+message oLeaveRoomReq {
+    option (e_client_p_i_d) = LeaveRoomReq;
+    uint64 roomId = 1;
+}
+
+message oLeaveRoomAsw {
+    option (e_server_p_i_d) = LeaveRoomAsw;
+    eError code = 1;
+}
+
+message oLeaveRoomPush {
+    option (e_server_p_i_d) = LeaveRoomPush;
+    uint64 leaveUserId = 1;
+}
+
+/*
+*   DissolveRoomReq
+*   DissolveRoomAsw                 = 1205;
+*   DissolveRoomPush                = 1206;
+*/
+
+message oDissolveRoomReq {
+    option (e_client_p_i_d) = DissolveRoomReq;
+    uint64 roomId = 1;
+}
+
+message oDissolveRoomAsw {
+    option (e_server_p_i_d) = DissolveRoomAsw;
+    eError code = 1;
+    uint64 roomId = 2;
+}
+
+message oDissolveRoomPush {
+    option (e_server_p_i_d) = DissolveRoomPush;
+    uint64 roomId = 1;
+}
+
+/*
+*   QuitRoomReq                     = 302;
+*   QuitRoomAsw                     = 1207;
+*   QuitRoomPush                    = 1208;
+*/
+
+message oQuitRoomReq {
+    uint64 roomId = 1;
+}
+
+message oQuitRoomAsw {
+    eError code = 1;
+    uint64 roomId = 2;
+}
+
+message oQuitRoomPush {
+    uint64 userId = 1;
+    uint64 roomId = 2;
+}
+
+/*
+    KickUserOutRoom              = 303;
+    KickUserOutRoomPush             = 1210;
+*/
+
+message oKickUserOutRoom {
+    option (e_client_p_i_d) = KickUserOutRoom;
+    uint64 roomId = 1;
+    uint64 kickUserId = 2;
+}
+
+// 服务器下行: 踢人成败(专门回复给踢人者)
+message oKickUserOutRoomAsw {
+    option (e_server_p_i_d) = KickUserOutRoomAsw;
+    eError code = 1;
+    uint64 kickUserId = 2;
+}
+
+message oKickUserOutRoomPush {
+    option (e_server_p_i_d) = KickUserOutRoomPush;
+    uint64 roomId = 1;
+    uint64 kickUserId = 2;
+}
+
+/*
+    ChangeRoomNameReq               = 311;
+    MuteUserReq                     = 321;
+*/
+
+message oChangeRoomNameReq {
+    option (e_client_p_i_d) = ChangeRoomNameReq;
+    uint64 roomId = 1;
+    string name = 2;
+}
+
+message oChangeRoomNameAsw {
+    option (e_server_p_i_d) = ChangeRoomNameAsw;
+    eError code = 1;
+}
+
+message oChangeRoomNamePush {
+    option (e_server_p_i_d) = ChangeRoomNamePush;
+    uint64 roomId = 1;
+    string name = 2;
+}
+
+enum eMuteType {
+    MuteOn = 0;
+    MuteOff = 1;
+}
+
+message oMuteUserReq {
+    option (e_client_p_i_d) = MuteUserReq;
+    uint64 roomId = 1;
+    bool muteAllUser = 2;
+    uint64 muteUserId =3;
+    eMuteType type = 4;
+}
+
+message oMuteUserAsw {
+    option (e_server_p_i_d) = MuteUserAsw;
+    eError code = 1;
+    uint64 roomId = 2;
+    bool muteAllUser = 3;
+    uint64 muteUserId = 4;
+    eMuteType type = 5;
+}
+
+message oMuteUserPush {
+    option (e_server_p_i_d) = MuteUserPush;
+    uint64 roomId = 1;
+    uint64 muteUserId =2;
+    bool muteAllUser = 3;
+    eMuteType type = 4;
+}
+
+message oRoomSetMaxStageCountReq {
+    uint64 roomId = 1;
+    uint64 maxStageCount = 2;
+}
+
+message oRoomSetMaxStageCountAsw {
+    eError code = 1;
+    uint64 roomId = 2;
+    uint64 maxStageCount = 3;
+}
+
+message oRoomSetMaxStageCountPush {
+    uint64 roomId = 1;
+    uint64 maxStageCount = 3;
+}
+
+/*
+    EnterStageReq                   = 501;
+    LeaveStageReq                   = 503;
+
+    EnterStageAsw                   = 1501;
+    EnterStagePush                  = 1502;
+    LeaveStageAsw                   = 1503;
+    LeaveStagePush                  = 1504;
+    StageQueueInfoPush              = 1505;
+*/
+
+message oEnterStageReq {
+    option (e_client_p_i_d) = EnterStageReq;
+    string context = 1;
+}
+
+message oEnterStageAsw {
+    option (e_server_p_i_d) = EnterStageAsw;
+    eError code = 1;
+    uint64 roomId = 2;
+    uint64 stageId = 3;
+}
+
+message oEnterStagePush {
+    option (e_server_p_i_d) = EnterStagePush;
+    uint64 userId = 1;
+    uint64 stageId = 2;
+}
+
+message oLeaveStageReq {
+    option (e_client_p_i_d) = LeaveStageReq;
+}
+
+message oLeaveStageAsw {
+    option (e_server_p_i_d) = LeaveStageAsw;
+    eError code = 1;
+    uint64 stageId = 2;
+}
+
+message oLeaveStagePush {
+    option (e_server_p_i_d) = LeaveStagePush;
+    uint64 userId = 1;
+    uint64 stageId = 2;
+}
+
+enum eStageQueueType {
+    RoomQueue = 0;
+    HardWare = 1;
+}
+
+message oStageQueueInfoPush {
+    option (e_server_p_i_d) = StageQueueInfoPush;
+    eStageQueueType type = 1;   //队伍类型(为了兼容旧消息,必然是RoomQueue)
+    int32 queueCount = 2;       //排队人数
+    repeated oStageInfo queueUserIds = 3; //排队的user数组
+    int32 stageCount = 4;   //舞台数量
+    repeated oStageInfo stageUserIds = 5; //台上的user数组
+    repeated uint64 stageQueueUserIds = 6;//台上的队列
+}
+
+// 客户端请求,离开队伍
+message oLeaveQueueReq {
+    option (e_client_p_i_d) = LeaveQueueReq;
+}
+message oLeaveQueueAsw {
+    option (e_server_p_i_d) = LeaveQueueAsw;
+    eError code = 1;
+}
+
+// 服务器下行: 被踢出小窗
+message oKickOutStagePush {
+    option (e_server_p_i_d) = KickOutStagePush;
+    uint64 userId = 1;
+}
+
+// app发起离开UE请求(小退)
+message oLeaveUeReq {
+    option (e_client_p_i_d) = LeaveUeReq;
+}
+// 服务器下行: app发起离开UE请求(小退)的响应
+message oLeaveUeAsw {
+    option (e_server_p_i_d) = LeaveUeAsw;
+    eError code = 1;    //SUCCESS-表示执行了下台操作,其余皆为失败
+    int32 index = 2;    //小窗数组下标索引,从0开始,-1为无效值
+    int32 stageId = 3;  //舞台索引,从0开始,-1为无效值
+}
+
+// 服务器下行: 用户离开UE,通知除本人以外的其他人
+message oLeaveUePush {
+    option (e_server_p_i_d) = LeaveUePush;
+    uint64 userId = 1;  //离开UE的用户id
+    int32 index = 2;    //小窗数组下标索引,从0开始,-1为无效值
+    int32 stageId = 3;  //舞台索引,从0开始,-1为无效值
+}
+
+// app发起: 再次上台请求(在小窗中,且小退过)
+message oReEnterStageReq {
+    option (e_client_p_i_d) = ReEnterStageReq;
+    string context = 1;
+}
+
+// app发起: 更新上台的context
+message oUpdateEnterStageContextReq {
+    option (e_client_p_i_d) = UpdateEnterStageContextReq;
+    string context = 1;
+}
+// 服务器下行: 更新上台的context的响应
+message oUpdateEnterStageContextAsw {
+    option (e_server_p_i_d) = UpdateEnterStageContextAsw;
+    eError code = 1;
+}
+
+// 服务器下行: 在stageType变成StageTypeTryEnter时,通知该客户端
+message oStageStatusChangePush {
+    option (e_server_p_i_d) = StageStatusChangePush;
+    int32 index = 1;    //小窗数组下标(从0开始)
+    int64 stageId = 2;  //舞台ID(从0开始),不在舞台上用-1表示
+    uint64 userId = 3;  //用户ID
+    eStageType stageType = 4; //用户状态
+}
+
+message oInviteUser {
+    int32 index = 1;    //小窗数组下标(从0开始)
+    uint64 userId = 2;  //用户ID
+}
+
+// 发起"多人协同动作邀请"
+message oMultiActionReq {
+    option (e_client_p_i_d) = MultiActionReq;
+    string context = 1;
+    repeated oInviteUser users = 2; //被邀请的人员列表
+    string inviteText = 3;          //用于给被邀请者
+}
+
+// 服务器下行: 回复"多人协同动作邀请"
+message oMultiActionAsw {
+    option (e_server_p_i_d) = MultiActionAsw;
+    eError code = 1; //结果. SUCCESS:参数合法且被邀请者都在线,邀请已经成功发送,等待对方回复
+}
+
+// 服务器下行: 邀请"多人协同动作"
+message oMultiActionInvitePush {
+    option (e_server_p_i_d) = MultiActionInvitePush;
+    string inviteText = 1;  //邀请方给被邀请者的
+    uint64 userId = 2;      //邀请方的 用户ID
+}
+
+// 回复"多人协同动作"邀请
+message oMultiActionReply {
+    option (e_client_p_i_d) = MultiActionReply;
+    bool agree = 1; //是否同意
+    uint64 inviterUserId = 2; //邀请方用户ID
+}
+
+// 服务器下行: 回复"多人协同动作"邀请的结果
+message oMultiActionReplyAsw {
+    option (e_server_p_i_d) = MultiActionReplyAsw;
+    eError code = 1; //失败原因
+}
+
+// 服务器下行: 推送给邀请方,其他人是否同意
+message oMultiActionReplyResult {
+    option (e_server_p_i_d) = MultiActionReplyResult;
+    bool agree = 1;     //是否同意
+    uint64 userId = 2;  //被邀请方ID
+}
