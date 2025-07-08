@@ -103,6 +103,7 @@ async def send_login_request(uid, access_token, instoken, room_id, enter_stage_i
         login_req.account = uid
         login_req.token = access_token
         login_req.insToken = instoken
+        print(f"登录请求参数: uid: {login_req.account}, token: {login_req.token}, insToken: {login_req.insToken}")
 
         # 序列化消息
         protobuf_body = login_req.SerializeToString()
@@ -224,7 +225,7 @@ async def send_enter_room_request(websocket, room_id, enter_stage_info):
                 
                 # 进入房间成功后，发送登台请求
                 print("准备发送登台请求...")
-                await send_enter_stage_request(websocket, enter_stage_info)
+                await send_enter_stage_request(websocket, enter_stage_info, enter_room_asw.roomId)
             else:
                 print(f"进入房间失败: {error_name}")
 
@@ -242,7 +243,7 @@ async def send_enter_room_request(websocket, room_id, enter_stage_info):
         print(f"发送进入房间请求时发生错误: {e}")
 
 
-async def send_enter_stage_request(websocket, enter_stage_info):
+async def send_enter_stage_request(websocket, enter_stage_info, room_id):
     """发送登台请求"""
     try:
         # 创建登台请求
@@ -267,62 +268,218 @@ async def send_enter_stage_request(websocket, enter_stage_info):
         await websocket.send(message)
         print(f"已发送登台请求 ({len(message)} 字节)")
 
-        # 接收响应 - 可能需要循环接收多个消息
-        # while True:
-        try:
-            response = await asyncio.wait_for(websocket.recv(), timeout=5)
-            print(f"收到消息原始响应: {response[:100]}...")  # 只打印前100字节
+        # 接收响应 - 循环接收消息直到登台成功或失败
+        enter_stage_success = False
+        received_stage_change = False
+        room_id_for_leave = None
+        
+        timeout_count = 0
+        max_timeouts = 2  # 最多等待2次超时，然后判断是否已经成功
+        
+        while not enter_stage_success and timeout_count < max_timeouts:
+            try:
+                response = await asyncio.wait_for(websocket.recv(), timeout=8)
+                print(f"收到消息原始响应: {response[:100]}...")  # 只打印前100字节
 
-            # 解析响应
-            total_len = struct.unpack('<I', response[:4])[0]
-            msg_id = struct.unpack('<H', response[4:6])[0]
-            payload = response[6:]
+                # 解析响应
+                total_len = struct.unpack('<I', response[:4])[0]
+                msg_id = struct.unpack('<H', response[4:6])[0]
+                payload = response[6:]
 
-            print(f"响应消息ID: {msg_id}, 长度: {total_len}")
+                print(f"响应消息ID: {msg_id}, 长度: {total_len}")
 
-            # 根据消息ID解析不同的响应类型
-            if msg_id == 1501:  # EnterStageAsw
-                enter_stage_asw = XProto_pb2.oEnterStageAsw()
-                enter_stage_asw.ParseFromString(payload)
-                print(f"登台响应: {enter_stage_asw.code}")
-                # 查看枚举值对应的名称
-                error_name = XProto_pb2.eError.Name(enter_stage_asw.code)
-                print(f"登台结果: {error_name}")
-                
-                if enter_stage_asw.code == XProto_pb2.SUCCESS:
-                    print(f"成功登台: 房间ID {enter_stage_asw.roomId}, 舞台ID {enter_stage_asw.stageId}")
+                # 根据消息ID解析不同的响应类型
+                if msg_id == 1501:  # EnterStageAsw
+                    enter_stage_asw = XProto_pb2.oEnterStageAsw()
+                    enter_stage_asw.ParseFromString(payload)
+                    print(f"登台响应: {enter_stage_asw.code}")
+                    # 查看枚举值对应的名称
+                    error_name = XProto_pb2.eError.Name(enter_stage_asw.code)
+                    print(f"登台结果: {error_name}")
+                    
+                    if enter_stage_asw.code == XProto_pb2.SUCCESS:
+                        print(f"成功登台: 房间ID {enter_stage_asw.roomId}, 舞台ID {enter_stage_asw.stageId}")
+                        room_id_for_leave = enter_stage_asw.roomId
+                        enter_stage_success = True
+                    else:
+                        print(f"登台失败: {error_name}")
+                        return  # 登台失败，退出函数
+                    
+                elif msg_id == 1502:  # EnterStagePush
+                    enter_stage_push = XProto_pb2.oEnterStagePush()
+                    enter_stage_push.ParseFromString(payload)
+                    print(f"收到用户登台广播: 用户ID {enter_stage_push.userId}, 舞台ID {enter_stage_push.stageId}")
+
+                elif msg_id == 1522:  # StageStatusChangePush
+                    stage_status_change = XProto_pb2.oStageStatusChangePush()
+                    stage_status_change.ParseFromString(payload)
+                    print(f"收到舞台状态变更: 索引{stage_status_change.index}, 舞台ID{stage_status_change.stageId}, 用户ID{stage_status_change.userId}, 状态{stage_status_change.stageType}")
+                    
+                    # 检查状态变更是否表示登台成功
+                    if stage_status_change.stageType == XProto_pb2.StageTypeTryEnter:
+                        print("舞台状态变更为 TryEnter - 正在尝试上台")
+                        received_stage_change = True
+                    elif stage_status_change.stageType == XProto_pb2.StageTypeWorking:
+                        print("舞台状态变更为 Working - 已经在台上工作！")
+                        received_stage_change = True
+                        # 假设当前room_id就是我们要离开的房间ID（从全局变量获取）
+                        # room_id_for_leave = room_id  # 需要从外部获取
+
+                elif msg_id == 1505:  # StageQueueInfoPush
+                    stage_queue_info = XProto_pb2.oStageQueueInfoPush()
+                    stage_queue_info.ParseFromString(payload)
+                    print(f"收到舞台队列信息: 队列类型{stage_queue_info.type}, 排队人数{stage_queue_info.queueCount}, 舞台数量{stage_queue_info.stageCount}")
+                    if stage_queue_info.queueUserIds:
+                        print(f"排队用户: {len(stage_queue_info.queueUserIds)}个")
+                    if stage_queue_info.stageUserIds:
+                        print(f"台上用户: {len(stage_queue_info.stageUserIds)}个")
+
                 else:
-                    print(f"登台失败: {error_name}")
-                # break  # 收到登台响应后退出循环
+                    print(f"收到未知消息类型: {msg_id}")
 
-            elif msg_id == 1502:  # EnterStagePush
-                enter_stage_push = XProto_pb2.oEnterStagePush()
-                enter_stage_push.ParseFromString(payload)
-                print(f"收到用户登台广播: 用户ID {enter_stage_push.userId}, 舞台ID {enter_stage_push.stageId}")
-
-            elif msg_id == 1522:  # StageStatusChangePush
-                stage_status_change = XProto_pb2.oStageStatusChangePush()
-                stage_status_change.ParseFromString(payload)
-                print(f"收到舞台状态变更: 索引{stage_status_change.index}, 舞台ID{stage_status_change.stageId}, 用户ID{stage_status_change.userId}, 状态{stage_status_change.stageType}")
-
-            elif msg_id == 1505:  # StageQueueInfoPush
-                stage_queue_info = XProto_pb2.oStageQueueInfoPush()
-                stage_queue_info.ParseFromString(payload)
-                print(f"收到舞台队列信息: 队列类型{stage_queue_info.type}, 排队人数{stage_queue_info.queueCount}, 舞台数量{stage_queue_info.stageCount}")
-                if stage_queue_info.queueUserIds:
-                    print(f"排队用户: {len(stage_queue_info.queueUserIds)}个")
-                if stage_queue_info.stageUserIds:
-                    print(f"台上用户: {len(stage_queue_info.stageUserIds)}个")
-
-            else:
-                print(f"收到未知消息类型: {msg_id}")
-
-        except asyncio.TimeoutError:
-            print("等待登台响应超时")
-            # break
+            except asyncio.TimeoutError:
+                timeout_count += 1
+                print(f"等待登台响应超时 ({timeout_count}/{max_timeouts})")
+                
+                # 如果收到了舞台状态变更，可能登台已经成功
+                if received_stage_change and timeout_count >= max_timeouts:
+                    print("基于舞台状态变更判断登台可能成功，开始等待流程")
+                    enter_stage_success = True
+                    # 使用外部的room_id
+                    
+        # 如果成功登台（通过正式响应或状态变更推断）
+        if enter_stage_success or received_stage_change:
+            if not room_id_for_leave:
+                # 如果没有从响应中得到room_id，使用传入的参数
+                room_id_for_leave = room_id
+                print(f"使用传入的房间ID: {room_id_for_leave}")
+                
+            print("登台成功，等待20秒后离开房间...")
+            await wait_and_leave_room(websocket, room_id_for_leave)
+        else:
+            print("登台过程失败或超时")
 
     except Exception as e:
         print(f"发送登台请求时发生错误: {e}")
+
+
+async def wait_and_leave_room(websocket, room_id):
+    """等待20秒并在等待期间处理消息，然后离开房间"""
+    start_time = asyncio.get_event_loop().time()
+    target_time = start_time + 20  # 20秒后
+    
+    print(f"开始等待20秒... (当前时间: {start_time:.2f})")
+    
+    try:
+        while True:
+            current_time = asyncio.get_event_loop().time()
+            remaining_time = target_time - current_time
+            
+            if remaining_time <= 0:
+                print("等待时间已到，准备离开房间...")
+                await send_leave_room_request(websocket, room_id)
+                return
+            
+            print(f"剩余等待时间: {remaining_time:.1f}秒")
+            
+            try:
+                # 设置较短的超时时间来检查消息，同时不阻塞太久
+                response = await asyncio.wait_for(websocket.recv(), timeout=min(2.0, remaining_time))
+                print(f"等待期间收到消息: {response[:50]}...")
+                
+                # 解析并处理收到的消息
+                total_len = struct.unpack('<I', response[:4])[0]
+                msg_id = struct.unpack('<H', response[4:6])[0]
+                payload = response[6:]
+                print(f"等待期间收到消息ID: {msg_id}, 长度: {total_len}")
+                
+                # 可以在这里处理其他类型的消息
+                if msg_id == 1502:  # EnterStagePush
+                    enter_stage_push = XProto_pb2.oEnterStagePush()
+                    enter_stage_push.ParseFromString(payload)
+                    print(f"等待期间收到用户登台广播: 用户ID {enter_stage_push.userId}, 舞台ID {enter_stage_push.stageId}")
+                elif msg_id == 1522:  # StageStatusChangePush
+                    stage_status_change = XProto_pb2.oStageStatusChangePush()
+                    stage_status_change.ParseFromString(payload)
+                    print(f"等待期间收到舞台状态变更: 索引{stage_status_change.index}, 舞台ID{stage_status_change.stageId}")
+                else:
+                    print(f"等待期间收到其他消息类型: {msg_id}")
+                    
+            except asyncio.TimeoutError:
+                # 超时是正常的，继续循环检查时间
+                continue
+                
+    except Exception as e:
+        print(f"等待期间发生错误: {e}")
+        # 即使发生错误，也尝试离开房间
+        try:
+            await send_leave_room_request(websocket, room_id)
+        except:
+            pass
+
+
+async def send_leave_room_request(websocket, room_id):
+    """发送离开房间请求"""
+    try:
+        # 创建离开房间请求
+        leave_room_req = XProto_pb2.oLeaveRoomReq()
+        leave_room_req.roomId = room_id
+
+        # 序列化消息
+        protobuf_body = leave_room_req.SerializeToString()
+
+        # 构造完整消息 (4字节长度 + 2字节消息号 + Protobuf数据)
+        message_id = 203  # LeaveRoomReq的ID
+        total_length = 4 + 2 + len(protobuf_body)  # 包含长度字段自身
+
+        # 小端格式打包
+        message = (
+                struct.pack('<I', total_length) +  # 4字节长度 (小端)
+                struct.pack('<H', message_id) +  # 2字节消息ID (小端)
+                protobuf_body  # Protobuf数据
+        )
+
+        # 发送消息
+        await websocket.send(message)
+        print(f"已发送离开房间请求 ({len(message)} 字节), roomId: {room_id}")
+
+        # 接收响应
+        response = await asyncio.wait_for(websocket.recv(), timeout=5)
+        print(f"收到离开房间原始响应: {response[:100]}...")  # 只打印前100字节
+
+        # 解析响应
+        total_len = struct.unpack('<I', response[:4])[0]
+        msg_id = struct.unpack('<H', response[4:6])[0]
+        payload = response[6:]
+
+        print(f"离开房间响应消息ID: {msg_id}, 长度: {total_len}")
+
+        # 根据消息ID解析不同的响应类型
+        if msg_id == 1203:  # LeaveRoomAsw
+            leave_room_asw = XProto_pb2.oLeaveRoomAsw()
+            leave_room_asw.ParseFromString(payload)
+            print(f"离开房间响应: {leave_room_asw.code}")
+            # 查看枚举值对应的名称
+            error_name = XProto_pb2.eError.Name(leave_room_asw.code)
+            print(f"离开房间结果: {error_name}")
+            
+            if leave_room_asw.code == XProto_pb2.SUCCESS:
+                print("成功离开房间")
+            else:
+                print(f"离开房间失败: {error_name}")
+
+        elif msg_id == 1204:  # LeaveRoomPush
+            leave_room_push = XProto_pb2.oLeaveRoomPush()
+            leave_room_push.ParseFromString(payload)
+            print(f"收到用户离开房间广播: 用户ID {leave_room_push.leaveUserId}")
+
+        else:
+            print(f"收到未知消息类型: {msg_id}")
+
+    except asyncio.TimeoutError:
+        print("等待离开房间响应超时")
+    except Exception as e:
+        print(f"发送离开房间请求时发生错误: {e}")
 
 
 def get_room_data(room_id):
@@ -532,17 +689,17 @@ if __name__ == "__main__":
     enter_stage_info = build_enter_stage_info(room_info)
     print("*" * 50 + "构建登台信息成功" + "*" * 50)
     
-    create_info = create_room(room_info['data']['roomId'], co_creation_id, access_token)
-    if create_info is None:
-        raise Exception("create_room err")
-    room_primary_id = create_info['data']['id']
-    print(f'primary room key: {room_primary_id}')
-    print("*" * 50 + "创建房间成功" + "*" * 50)
-    join_info = join_room(room_primary_id, access_token, 1)
-    if join_info is None:
-        raise Exception("join_room err")
-    print(f'join_info: {join_info}')
-    print("*" * 50 + "join房间成功" + "*" * 50)
+    # create_info = create_room(room_info['data']['roomId'], co_creation_id, access_token)
+    # if create_info is None:
+    #     raise Exception("create_room err")
+    # room_primary_id = create_info['data']['id']
+    # print(f'primary room key: {room_primary_id}')
+    # print("*" * 50 + "创建房间成功" + "*" * 50)
+    # join_info = join_room(room_primary_id, access_token, 1)
+    # if join_info is None:
+    #     raise Exception("join_room err")
+    # print(f'join_info: {join_info}')
+    # print("*" * 50 + "join房间成功" + "*" * 50)
     
     # 使用原始房间ID，不是创建房间返回的主键ID
     room_id = int(room_info['data']['roomId'])  # 使用原始房间ID
@@ -550,7 +707,7 @@ if __name__ == "__main__":
     # user_id = room_info['data']['userId']
     insToken, ws_url = schedule(user_id, room_id)
     print('insToken:', insToken, 'user_id:', user_id, 'room_id:', room_id)
-    asyncio.get_event_loop().run_until_complete(send_login_request(account, access_token, insToken, room_id, enter_stage_info, ws_url))
+    asyncio.get_event_loop().run_until_complete(send_login_request(int(user_id), access_token, insToken, room_id, enter_stage_info, ws_url))
     print("*" * 50 + "登台成功" + "*" * 50)
     
     # # 获取房间数据
