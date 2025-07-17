@@ -350,7 +350,7 @@ async def send_enter_room_request(websocket, room_id, enter_stage_info):
                 if msg_id == 1201:  # EnterRoomAsw
                     enter_room_asw = XProto_pb2.oEnterRoomAsw()
                     enter_room_asw.ParseFromString(payload)
-                    log_info(f"进入房间响应: {enter_room_asw.code}")
+                    log_info(f"进入房间响应: {enter_room_asw.code}, roomId: {enter_room_asw.roomId}")
                     # 查看枚举值对应的名称
                     error_name = XProto_pb2.eError.Name(enter_room_asw.code)
                     log_info(f"进入房间结果: {error_name}")
@@ -890,20 +890,20 @@ import sys
 if __name__ == "__main__":
     co_creation_id = 2
     # 发送验证码
-    # get_verify_code()
-    # log_info("*" * 50 + "获取验证码成功" + "*" * 50)
+    get_verify_code()
+    log_info("*" * 50 + "获取验证码成功" + "*" * 50)
     # # # 登录
-    # res = send_token_request()
-    # access_token = res['access_token']
-    access_token = 'dac1ac12-de1d-4d0d-aad1-822c1d4e3f7b'
-    account = 1754092805389819906
+    res = send_token_request()
+    access_token = res['access_token']
+    # access_token = 'dac1ac12-de1d-4d0d-aad1-822c1d4e3f7b'
+    # account = 1754092805389819906
     # room_info = get_room_info(1897191226568142849, access_token)
     # if room_info is None:
     #     raise Exception("get_room_info err")
     # # log_info(f'room_info: {room_info}')
     # sys.exit(0)
 
-    # account = int(res['user_id'])
+    account = int(res['user_id'])
     log_info(f"access_token: {access_token}, uid={account}")
     log_info("*" * 50 + "发送token成功" + "*" * 50)
 
