@@ -116,7 +116,7 @@ async def send_heartbeat(websocket, stop_event):
             log_info(f"已发送心跳请求 ({len(message)} 字节), timestamp: {heartbeat_req.timestamp}")
             
             # 等待20秒
-            await asyncio.sleep(20)
+            await asyncio.sleep(10)
             
     except asyncio.CancelledError:
         log_info("心跳任务被取消")
@@ -886,6 +886,27 @@ def get_room_info(room_id, access_token):
     except Exception as e:
         log_error(f"获取房间信息失败: {e}")
 
+def get_clothe_detail(clothe_id, access_token):
+    '''获取衣服详情'''
+    url = f'{endpoint}/admin/clothe/detail?clotheId={clothe_id}'
+    headers = {
+        'Content-Type': 'application/json',
+        "Authorization": f"Bearer {access_token}"
+    }
+    try:
+        response = requests.get(url, headers=headers)
+        log_info(f"获取衣服详情请求状态码: {response.status_code}")
+        log_info(f"获取衣服详情响应内容: {response.text}")
+        
+        if response.status_code == 200:
+            return response.json()
+        else:
+            log_info(f"请求失败，状态码: {response.status_code}")
+            return None
+    except Exception as e:
+        log_error(f"获取衣服详情失败: {e}")
+        return None
+
 import sys
 if __name__ == "__main__":
     co_creation_id = 2
@@ -901,6 +922,10 @@ if __name__ == "__main__":
     # if room_info is None:
     #     raise Exception("get_room_info err")
     # # log_info(f'room_info: {room_info}')
+    # sys.exit(0)
+
+    # clothe_detail = get_clothe_detail(1916394257281036290, access_token)
+    # log_info(f'clothe_detail: {clothe_detail}')
     # sys.exit(0)
 
     account = int(res['user_id'])
