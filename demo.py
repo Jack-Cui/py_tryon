@@ -721,6 +721,68 @@ def get_sysroomshare(co_creation_id, access_token):
         log_error(f"解析JSON响应失败: {e}")
         return None
 
+def check_login(access_token):
+    url = endpoint + f"/admin/oauth/check_token?token=" + access_token
+    headers = {
+        'Content-Type': 'application/json',
+        "Authorization": f"Bearer {access_token}"
+    }
+    try:
+        response = requests.get(url, headers=headers)
+        log_info(f"检查登录状态请求状态码: {response.status_code}")
+        log_info(f"检查登录状态响应内容: {response.text}")
+        
+        if response.status_code == 200:
+            return response.json()
+        if response.status_code == 424:
+            log_info(f'您的账号在其他地方登录。')
+        else:
+            log_info(f"请求失败，状态码: {response.status_code}")
+            return None
+            
+    except requests.exceptions.RequestException as e:
+        log_error(f"请求发生错误: {e}")
+        return None
+    except ValueError as e:
+        log_error(f"解析JSON响应失败: {e}")
+        return None
+
+
+
+def balance_deduction(access_token, user_id, room_id):
+    url = endpoint + "/admin/balance/deduction"
+    headers = {
+        'Content-Type': 'application/json',
+        "Authorization": f"Bearer {access_token}"
+    }
+    data = {
+        'deductionType': 2,
+        'count': 1,
+        'billPrice': 0.3,
+        'sourceId': room_id,
+        'userId': user_id,
+        'reduceCount': 1
+    }
+    try:
+        log_info(f"url:{url}, 请求内容:{json.dumps(data)}")
+        response = requests.post(url, headers=headers, json=data)
+        log_info(f"扣款请求状态码: {response.status_code}")
+        # print(f"房间数据响应内容: {response.text}")
+        
+        if response.status_code == 200:
+            return response.json()
+        else:
+            log_info(f"请求失败，状态码: {response.status_code}")
+            return None
+            
+    except requests.exceptions.RequestException as e:
+        log_error(f"请求发生错误: {e}")
+        return None
+    except ValueError as e:
+        log_error(f"解析JSON响应失败: {e}")
+        return None
+
+
 def create_room(room_id, co_creation_id, access_token):
     '''创建房间'''
     url = f'{endpoint}/admin/room/create'
@@ -928,9 +990,15 @@ if __name__ == "__main__":
     # log_info(f'clothe_detail: {clothe_detail}')
     # sys.exit(0)
 
+    check_login(access_token)
+    sys.exit(1)
+
     account = int(res['user_id'])
     log_info(f"access_token: {access_token}, uid={account}")
     log_info("*" * 50 + "发送token成功" + "*" * 50)
+
+    balance_deduction(access_token, account, 1939613403762253825)
+    sys.exit(1)
 
     room_info = get_sysroomshare(co_creation_id, access_token)
     log_info("*" * 50 + "获取房间信息成功" + "*" * 50)
