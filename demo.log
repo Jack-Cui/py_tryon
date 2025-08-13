@@ -1,0 +1,479 @@
+2025-08-07 21:23:08 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:08] [demo.py:132] 状态码: 200
+2025-08-07 21:23:08 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:08] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:23:08 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:08] [demo.py:952] **************************************************获取验证码成功**************************************************
+2025-08-07 21:23:08 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:08] [demo.py:145] 状态码: 200
+2025-08-07 21:23:08 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:08] [demo.py:146] 响应内容: {"access_token":"ddc3cf0c-b50b-4703-82c8-3ddddfb8e6c1","token_type":"bearer","refresh_token":"c77f5ad1-3927-41a4-9aa5-357450df7d86","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:23:08 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:08] [demo.py:969] access_token: ddc3cf0c-b50b-4703-82c8-3ddddfb8e6c1, uid=1754092805389819906
+2025-08-07 21:23:08 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:08] [demo.py:970] **************************************************发送token成功**************************************************
+2025-08-07 21:23:08 - demo - ERROR - [demo.py:76] - [2025-08-07 21:23:08] [demo.py:754] 请求发生错误: Failed to parse: http://180.184.140.234:9999balance/deduction
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:132] 状态码: 200
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:952] **************************************************获取验证码成功**************************************************
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:145] 状态码: 200
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:146] 响应内容: {"access_token":"339c3cee-f1d5-45ca-a375-75cd6e974242","token_type":"bearer","refresh_token":"a2e1abda-bfe8-4977-9052-6573c2cdeccf","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:969] access_token: 339c3cee-f1d5-45ca-a375-75cd6e974242, uid=1754092805389819906
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:970] **************************************************发送token成功**************************************************
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:744] 扣款请求状态码: 404
+2025-08-07 21:23:23 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:23] [demo.py:750] 请求失败，状态码: 404
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:132] 状态码: 200
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:952] **************************************************获取验证码成功**************************************************
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:145] 状态码: 200
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:146] 响应内容: {"access_token":"6144d596-b2f5-4a82-969f-5ffbef25425e","token_type":"bearer","refresh_token":"5141835f-be68-4320-b845-50464f07a26b","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:969] access_token: 6144d596-b2f5-4a82-969f-5ffbef25425e, uid=1754092805389819906
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:970] **************************************************发送token成功**************************************************
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:744] 扣款请求状态码: 404
+2025-08-07 21:23:42 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:42] [demo.py:750] 请求失败，状态码: 404
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:132] 状态码: 200
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:952] **************************************************获取验证码成功**************************************************
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:145] 状态码: 200
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:146] 响应内容: {"access_token":"be9fa3f0-18bf-421a-ae7f-f1fe703864fa","token_type":"bearer","refresh_token":"abc937e7-8fe2-4ea3-b5f3-20b2ee4b8470","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:969] access_token: be9fa3f0-18bf-421a-ae7f-f1fe703864fa, uid=1754092805389819906
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:970] **************************************************发送token成功**************************************************
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:744] 扣款请求状态码: 500
+2025-08-07 21:23:48 - demo - INFO - [demo.py:64] - [2025-08-07 21:23:48] [demo.py:750] 请求失败，状态码: 500
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:132] 状态码: 200
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:953] **************************************************获取验证码成功**************************************************
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:145] 状态码: 200
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:146] 响应内容: {"access_token":"e209eada-73d0-4c02-be11-a635e906f442","token_type":"bearer","refresh_token":"cd441fad-07ca-475c-bb43-7313a3427c80","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:970] access_token: e209eada-73d0-4c02-be11-a635e906f442, uid=1754092805389819906
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:971] **************************************************发送token成功**************************************************
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:743] 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:745] 扣款请求状态码: 500
+2025-08-07 21:24:38 - demo - INFO - [demo.py:64] - [2025-08-07 21:24:38] [demo.py:751] 请求失败，状态码: 500
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:132] 状态码: 200
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:953] **************************************************获取验证码成功**************************************************
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:145] 状态码: 200
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:146] 响应内容: {"access_token":"b95a1957-45c2-45ab-bfab-a697dd05dd3e","token_type":"bearer","refresh_token":"5d2e5c50-bc23-4ef4-b14e-45d4f4854767","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:970] access_token: b95a1957-45c2-45ab-bfab-a697dd05dd3e, uid=1754092805389819906
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:971] **************************************************发送token成功**************************************************
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:743] url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:745] 扣款请求状态码: 500
+2025-08-07 21:25:14 - demo - INFO - [demo.py:64] - [2025-08-07 21:25:14] [demo.py:751] 请求失败，状态码: 500
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:132] 状态码: 200
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:975] **************************************************获取验证码成功**************************************************
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:145] 状态码: 200
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:146] 响应内容: {"access_token":"74bd7d4a-0395-4066-a865-4df9443a7e58","token_type":"bearer","refresh_token":"2f27b4f6-c9aa-4245-b3df-2c687d985fc9","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:732] 检查登录状态请求状态码: 424
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:733] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-07 21:42:30 - demo - INFO - [demo.py:64] - [2025-08-07 21:42:30] [demo.py:738] 请求失败，状态码: 424
+2025-08-07 21:43:25 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:25] [demo.py:132] 状态码: 200
+2025-08-07 21:43:25 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:25] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:43:25 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:25] [demo.py:977] **************************************************获取验证码成功**************************************************
+2025-08-07 21:43:26 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:26] [demo.py:145] 状态码: 200
+2025-08-07 21:43:26 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:26] [demo.py:146] 响应内容: {"access_token":"acf4df27-65c5-4d50-b8e5-30b26aa1127c","token_type":"bearer","refresh_token":"b8add9b0-6798-4495-9a21-ef227262f3d9","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:43:26 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:26] [demo.py:732] 检查登录状态请求状态码: 424
+2025-08-07 21:43:26 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:26] [demo.py:733] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-07 21:43:26 - demo - INFO - [demo.py:64] - [2025-08-07 21:43:26] [demo.py:738] 您的账号在其他地方登录。
+2025-08-07 21:57:46 - demo - INFO - [demo.py:64] - [2025-08-07 21:57:46] [demo.py:132] 状态码: 200
+2025-08-07 21:57:46 - demo - INFO - [demo.py:64] - [2025-08-07 21:57:46] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:57:46 - demo - INFO - [demo.py:64] - [2025-08-07 21:57:46] [demo.py:988] **************************************************获取验证码成功**************************************************
+2025-08-07 21:57:46 - demo - INFO - [demo.py:64] - [2025-08-07 21:57:46] [demo.py:145] 状态码: 200
+2025-08-07 21:57:46 - demo - INFO - [demo.py:64] - [2025-08-07 21:57:46] [demo.py:146] 响应内容: {"access_token":"b249a910-80d2-455c-a87f-fa7fa53770d0","token_type":"bearer","refresh_token":"a60bbffc-4e6f-4186-9bc3-35f486d254da","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:57:46 - demo - INFO - [demo.py:64] - [2025-08-07 21:57:46] [demo.py:1008] access_token: b249a910-80d2-455c-a87f-fa7fa53770d0, uid=1754092805389819906
+2025-08-07 21:57:46 - demo - INFO - [demo.py:64] - [2025-08-07 21:57:46] [demo.py:1009] **************************************************发送token成功**************************************************
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:132] 状态码: 200
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:988] **************************************************获取验证码成功**************************************************
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:145] 状态码: 200
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:146] 响应内容: {"access_token":"d62953a7-95e1-4681-bf91-6ae470f1d018","token_type":"bearer","refresh_token":"b3c06ddf-8018-4eae-8eef-e69986f68fb2","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:1008] access_token: d62953a7-95e1-4681-bf91-6ae470f1d018, uid=1754092805389819906
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:1009] **************************************************发送token成功**************************************************
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:762] Generated Signature: d1ec2dadb3ddcdb431ba95c586ee11eb4896c6d63fb4c15389f47c77eefc3526
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:778] url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:780] 扣款请求状态码: 500
+2025-08-07 21:58:53 - demo - INFO - [demo.py:64] - [2025-08-07 21:58:53] [demo.py:786] 请求失败，状态码: 500
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:132] 状态码: 200
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:988] **************************************************获取验证码成功**************************************************
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:145] 状态码: 200
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:146] 响应内容: {"access_token":"5b8060d6-4b54-48b1-a906-d4a4fbf91721","token_type":"bearer","refresh_token":"f09af246-5a75-4119-bdae-550640287c25","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:1008] access_token: 5b8060d6-4b54-48b1-a906-d4a4fbf91721, uid=1754092805389819906
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:1009] **************************************************发送token成功**************************************************
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:762] Generated Signature: 3c9eeb9711a612682180b4d1a39ef1aef6dbc09e939e2fc78aeb142aa14431d6
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:778] url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:780] 扣款请求状态码: 424
+2025-08-07 21:59:49 - demo - INFO - [demo.py:64] - [2025-08-07 21:59:49] [demo.py:786] 请求失败，状态码: 424
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:132] 状态码: 200
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:145] 状态码: 200
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:146] 响应内容: {"access_token":"eccec45e-f412-4963-834a-9eb562e43df4","token_type":"bearer","refresh_token":"fddaf9de-03b5-4e2f-b1e9-167eaa78028e","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:1009] access_token: eccec45e-f412-4963-834a-9eb562e43df4, uid=1754092805389819906
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:1010] **************************************************发送token成功**************************************************
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:762] Generated Signature: b9fa9f929912cb699dfe5d4fec607d483672a48358e416acd795a24c3d1c1742
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:779] url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:781] 扣款请求状态码: 424
+2025-08-07 22:00:47 - demo - INFO - [demo.py:64] - [2025-08-07 22:00:47] [demo.py:787] 请求失败，状态码: 424
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:132] 状态码: 200
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:145] 状态码: 200
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:146] 响应内容: {"access_token":"e19a3974-8ce1-40ce-8e47-42fefafe4ddd","token_type":"bearer","refresh_token":"d74d0d79-dcc1-487e-b82f-aa7ef255356b","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:1009] access_token: e19a3974-8ce1-40ce-8e47-42fefafe4ddd, uid=1754092805389819906
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:1010] **************************************************发送token成功**************************************************
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:762] Generated Signature: f47cbca61a394d434b3791576a30fcd144d67b03d1d1c606de2e5ac2a115709d
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:779] header:{'X-signature': 'f47cbca61a394d434b3791576a30fcd144d67b03d1d1c606de2e5ac2a115709d'}, url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:781] 扣款请求状态码: 424
+2025-08-07 22:01:08 - demo - INFO - [demo.py:64] - [2025-08-07 22:01:08] [demo.py:787] 请求失败，状态码: 424
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:132] 状态码: 200
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:145] 状态码: 200
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:146] 响应内容: {"access_token":"3988eef5-3f05-4862-bb12-b38e8ed5ff03","token_type":"bearer","refresh_token":"3454a283-5dfe-47ce-9f9d-3303605d79cf","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:1009] access_token: 3988eef5-3f05-4862-bb12-b38e8ed5ff03, uid=1754092805389819906
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:1010] **************************************************发送token成功**************************************************
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:762] Generated Signature: c781bcfefd8ae1e0337358842e84e693723a7907e113c1240c7ee35ad005eb3d
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:779] header:{'X-signature': 'c781bcfefd8ae1e0337358842e84e693723a7907e113c1240c7ee35ad005eb3d'}, url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:781] 扣款请求状态码: 424
+2025-08-07 22:07:21 - demo - INFO - [demo.py:64] - [2025-08-07 22:07:21] [demo.py:787] 请求失败，状态码: 424
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:132] 状态码: 200
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:145] 状态码: 200
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:146] 响应内容: {"access_token":"a090f21f-2326-49a2-a657-d142db226556","token_type":"bearer","refresh_token":"6a691d15-f94f-46d9-a1dd-a61f45c98799","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:1009] access_token: a090f21f-2326-49a2-a657-d142db226556, uid=1754092805389819906
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:1010] **************************************************发送token成功**************************************************
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:762] Generated Signature: 539b5b63be6e7ec0d33478cc9524cc1aee2d3b51315451a6448e47d8fe63d3bf
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:779] header:{'X-SHA-Signature': '539b5b63be6e7ec0d33478cc9524cc1aee2d3b51315451a6448e47d8fe63d3bf'}, url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:781] 扣款请求状态码: 424
+2025-08-07 22:09:35 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:35] [demo.py:787] 请求失败，状态码: 424
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:132] 状态码: 200
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:145] 状态码: 200
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:146] 响应内容: {"access_token":"891729ab-8e66-4603-80a0-6ab8ad887598","token_type":"bearer","refresh_token":"4c398497-5013-4576-8b83-b17803a527f7","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:1009] access_token: 891729ab-8e66-4603-80a0-6ab8ad887598, uid=1754092805389819906
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:1010] **************************************************发送token成功**************************************************
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:762] Generated Signature: f6fb329a744431e20626e4ce015a45026ac25a077405a569a47c7891dec1ad85
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:779] header:{'Content-Type': 'application/json', 'X-SHA-Signature': 'f6fb329a744431e20626e4ce015a45026ac25a077405a569a47c7891dec1ad85'}, url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:781] 扣款请求状态码: 424
+2025-08-07 22:09:48 - demo - INFO - [demo.py:64] - [2025-08-07 22:09:48] [demo.py:787] 请求失败，状态码: 424
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:132] 状态码: 200
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:145] 状态码: 200
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:146] 响应内容: {"access_token":"49460551-aac6-43da-b1d6-5a6bc8fc06ca","token_type":"bearer","refresh_token":"e58f8783-9629-4a85-a27c-cfa59392f522","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:1009] access_token: 49460551-aac6-43da-b1d6-5a6bc8fc06ca, uid=1754092805389819906
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:1010] **************************************************发送token成功**************************************************
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:758] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:762] Generated Signature: dfcb9e7a1c1b7919e146a328c233d306028c182ce980bfde2bc95e5c838c5cba
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:779] header:{'Content-Type': 'application/json', 'X-SHA-Signature': 'dfcb9e7a1c1b7919e146a328c233d306028c182ce980bfde2bc95e5c838c5cba'}, url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:781] 扣款请求状态码: 424
+2025-08-07 22:43:24 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:24] [demo.py:787] 请求失败，状态码: 424
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:132] 状态码: 200
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:145] 状态码: 200
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:146] 响应内容: {"access_token":"4a42bea9-9a23-4473-91a8-7a3588502221","token_type":"bearer","refresh_token":"f4eb326f-9164-407f-aa8d-47909f5b5e7a","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:732] 检查登录状态请求状态码: 424
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:733] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-07 22:43:45 - demo - INFO - [demo.py:64] - [2025-08-07 22:43:45] [demo.py:738] 您的账号在其他地方登录。
+2025-08-08 16:41:48 - demo - INFO - [demo.py:64] - [2025-08-08 16:41:48] [demo.py:132] 状态码: 200
+2025-08-08 16:41:48 - demo - INFO - [demo.py:64] - [2025-08-08 16:41:48] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-08 16:41:48 - demo - INFO - [demo.py:64] - [2025-08-08 16:41:48] [deduction.py:88] **************************************************获取验证码成功**************************************************
+2025-08-08 16:41:48 - demo - INFO - [demo.py:64] - [2025-08-08 16:41:48] [demo.py:145] 状态码: 200
+2025-08-08 16:41:48 - demo - INFO - [demo.py:64] - [2025-08-08 16:41:48] [demo.py:146] 响应内容: {"access_token":"0c9ae517-a3b9-456f-9c6b-4c026deb13e3","token_type":"bearer","refresh_token":"34066061-5e5c-4400-8393-e360c2bc52a4","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-08 16:51:54 - demo - INFO - [demo.py:64] - [2025-08-08 16:51:54] [demo.py:132] 状态码: 200
+2025-08-08 16:51:54 - demo - INFO - [demo.py:64] - [2025-08-08 16:51:54] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-08 16:51:54 - demo - INFO - [demo.py:64] - [2025-08-08 16:51:54] [deduction.py:88] **************************************************获取验证码成功**************************************************
+2025-08-08 16:51:54 - demo - INFO - [demo.py:64] - [2025-08-08 16:51:54] [demo.py:145] 状态码: 200
+2025-08-08 16:51:54 - demo - INFO - [demo.py:64] - [2025-08-08 16:51:54] [demo.py:146] 响应内容: {"access_token":"c0b7ade3-5552-41f5-9495-8748112b58a3","token_type":"bearer","refresh_token":"e600259e-7095-4407-9fe0-d60a94ba1dfb","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-08 16:52:06 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:06] [demo.py:132] 状态码: 200
+2025-08-08 16:52:06 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:06] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-08 16:52:06 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:06] [deduction.py:88] **************************************************获取验证码成功**************************************************
+2025-08-08 16:52:06 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:06] [demo.py:145] 状态码: 200
+2025-08-08 16:52:06 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:06] [demo.py:146] 响应内容: {"access_token":"3bda0e36-891a-4b56-b12a-bf1b5391d40f","token_type":"bearer","refresh_token":"5fcc8229-7992-453a-9f18-dfbb5e4de83c","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-08 16:52:33 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:33] [demo.py:132] 状态码: 200
+2025-08-08 16:52:33 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:33] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-08 16:52:33 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:33] [deduction.py:88] **************************************************获取验证码成功**************************************************
+2025-08-08 16:52:33 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:33] [demo.py:145] 状态码: 200
+2025-08-08 16:52:33 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:33] [demo.py:146] 响应内容: {"access_token":"3779ec0e-577f-4c61-997a-0118498318c9","token_type":"bearer","refresh_token":"5fcd190f-d61d-4b79-8a1c-7b1cacb5e9df","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-08 16:52:33 - demo - INFO - [demo.py:64] - [2025-08-08 16:52:33] [deduction.py:63] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 3779ec0e-577f-4c61-997a-0118498318c9', 'X-timestamp': '1754643153202', 'X-requestId': '8dbef3fc33054efbb7ae79cc71cb99fa', 'X-signature': 'hrWZDfyFaU7YE8VfZojME/AzCfcckaXpTwwrnlP9IMw='}, data: {"deducteList": [{"deductionType": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 1939613403762253825}]}
+2025-08-09 09:44:51 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:51] [demo.py:132] 状态码: 200
+2025-08-09 09:44:51 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:51] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 09:44:51 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:51] [deduction.py:88] **************************************************获取验证码成功**************************************************
+2025-08-09 09:44:51 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:51] [demo.py:145] 状态码: 200
+2025-08-09 09:44:51 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:51] [demo.py:146] 响应内容: {"access_token":"c047eec7-4748-4ddb-b5eb-ef45c6fba30f","token_type":"bearer","refresh_token":"49110c5d-f168-4e93-ac99-b69983a46994","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 09:44:51 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:51] [deduction.py:63] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer c047eec7-4748-4ddb-b5eb-ef45c6fba30f', 'X-timestamp': '1754703891239', 'X-requestId': '4786d118141d4b1b937e5a4b0a49efc7', 'X-signature': 'jaCdUnK4sTM+gxVEkmHPMYktnnBDUidtTt1Wawogq2o='}, data: {"deducteList": [{"deductionType": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 1939613403762253825}]}
+2025-08-09 09:44:55 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:55] [demo.py:132] 状态码: 200
+2025-08-09 09:44:55 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:55] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 09:44:55 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:55] [deduction.py:88] **************************************************获取验证码成功**************************************************
+2025-08-09 09:44:55 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:55] [demo.py:145] 状态码: 200
+2025-08-09 09:44:55 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:55] [demo.py:146] 响应内容: {"access_token":"0c82edd1-dcdf-4176-a3f7-3f3bf7378194","token_type":"bearer","refresh_token":"39278e2f-fb02-4ffa-a323-e3b22e9dc189","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 09:44:55 - demo - INFO - [demo.py:64] - [2025-08-09 09:44:55] [deduction.py:63] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 0c82edd1-dcdf-4176-a3f7-3f3bf7378194', 'X-timestamp': '1754703895242', 'X-requestId': '29467033511841e0b3f37b46881a54e2', 'X-signature': 'ixAU0R4BU2F+ZSBCWcth2FNIRQNGdzZdGtFvN5b4k3I='}, data: {"deducteList": [{"deductionType": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 1939613403762253825}]}
+2025-08-09 09:47:53 - demo - INFO - [demo.py:64] - [2025-08-09 09:47:53] [demo.py:132] 状态码: 200
+2025-08-09 09:47:53 - demo - INFO - [demo.py:64] - [2025-08-09 09:47:53] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 09:47:53 - demo - INFO - [demo.py:64] - [2025-08-09 09:47:53] [deduction.py:88] **************************************************获取验证码成功**************************************************
+2025-08-09 09:47:53 - demo - INFO - [demo.py:64] - [2025-08-09 09:47:53] [demo.py:145] 状态码: 200
+2025-08-09 09:47:53 - demo - INFO - [demo.py:64] - [2025-08-09 09:47:53] [demo.py:146] 响应内容: {"access_token":"c327aae1-44e8-457f-ac45-3eebb53f8845","token_type":"bearer","refresh_token":"d9de9ef9-4f77-48df-ae94-25e5d792f0dd","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 09:47:53 - demo - INFO - [demo.py:64] - [2025-08-09 09:47:53] [deduction.py:63] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer c327aae1-44e8-457f-ac45-3eebb53f8845', 'X-timestamp': '1754704073492', 'X-requestId': '0a6478b8542d4a1f886636cc9ddb9705', 'X-signature': 'nH/mR9Lhyo398eJ2r/Obf7VscCYqOQQ+86EH92opTMc='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-09 09:53:36 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:36] [demo.py:132] 状态码: 200
+2025-08-09 09:53:36 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:36] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 09:53:36 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:36] [deduction.py:91] **************************************************获取验证码成功**************************************************
+2025-08-09 09:53:36 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:36] [demo.py:145] 状态码: 200
+2025-08-09 09:53:36 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:36] [demo.py:146] 响应内容: {"access_token":"e469c013-d2c4-485b-90e4-c087d31430af","token_type":"bearer","refresh_token":"d4dd9611-4906-4609-bb62-ae2ef9c2bbca","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 09:53:36 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:36] [deduction.py:66] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer e469c013-d2c4-485b-90e4-c087d31430af', 'X-timestamp': '1754650211157', 'X-requestId': '7562911722694462bad0aa2a65b3ddda', 'X-signature': 'mTM/WYyhf5lRWcN8pK7Z22divNrfUazzwaew1hNTACo='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-09 09:53:46 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:46] [demo.py:132] 状态码: 200
+2025-08-09 09:53:46 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:46] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 09:53:46 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:46] [deduction.py:91] **************************************************获取验证码成功**************************************************
+2025-08-09 09:53:46 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:46] [demo.py:145] 状态码: 200
+2025-08-09 09:53:46 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:46] [demo.py:146] 响应内容: {"access_token":"e79a3f13-4044-498c-ad7f-d4e1afcee453","token_type":"bearer","refresh_token":"8a0556dd-6f18-4745-8d78-e2204f2556d9","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 09:53:46 - demo - INFO - [demo.py:64] - [2025-08-09 09:53:46] [deduction.py:66] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer e79a3f13-4044-498c-ad7f-d4e1afcee453', 'X-timestamp': '1754704426168', 'X-requestId': 'bf3253d15f324ebc967fe14e56202be0', 'X-signature': 'rXwzWQeJpc1A8hhjT+F2LzRLbHTZ1cV53DGPJ+1VCIM='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-09 09:54:29 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:29] [demo.py:132] 状态码: 200
+2025-08-09 09:54:29 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:29] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 09:54:29 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:29] [deduction.py:92] **************************************************获取验证码成功**************************************************
+2025-08-09 09:54:30 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:30] [demo.py:145] 状态码: 200
+2025-08-09 09:54:30 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:30] [demo.py:146] 响应内容: {"access_token":"c53d7e7a-4bb5-403e-b66b-d0a525b7f459","token_type":"bearer","refresh_token":"86168a18-9312-4c63-a9a6-69465350b2a1","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 09:54:41 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:41] [demo.py:132] 状态码: 200
+2025-08-09 09:54:41 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:41] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 09:54:41 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:41] [deduction.py:92] **************************************************获取验证码成功**************************************************
+2025-08-09 09:54:41 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:41] [demo.py:145] 状态码: 200
+2025-08-09 09:54:41 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:41] [demo.py:146] 响应内容: {"access_token":"0eb536b0-0a12-4c08-a4d6-a041ca4320d5","token_type":"bearer","refresh_token":"e06badb1-9396-4705-8bd7-c41c3fc025db","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 09:54:41 - demo - INFO - [demo.py:64] - [2025-08-09 09:54:41] [deduction.py:67] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 0eb536b0-0a12-4c08-a4d6-a041ca4320d5', 'X-timestamp': '1754704481802', 'X-requestId': '0d4cdcb8a55b495cafc58c03a1564be9', 'X-signature': '6B7ZwD1vAqF8dsikPGlZFC+AKxiDwNzse71qECLcuaM='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-09 11:38:22 - demo - INFO - [demo.py:64] - [2025-08-09 11:38:22] [demo.py:132] 状态码: 200
+2025-08-09 11:38:22 - demo - INFO - [demo.py:64] - [2025-08-09 11:38:22] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-09 11:38:22 - demo - INFO - [demo.py:64] - [2025-08-09 11:38:22] [deduction.py:92] **************************************************获取验证码成功**************************************************
+2025-08-09 11:38:22 - demo - INFO - [demo.py:64] - [2025-08-09 11:38:22] [demo.py:145] 状态码: 200
+2025-08-09 11:38:22 - demo - INFO - [demo.py:64] - [2025-08-09 11:38:22] [demo.py:146] 响应内容: {"access_token":"e3f65334-bb1d-4a79-9115-c0047c9e241c","token_type":"bearer","refresh_token":"bdd99d1b-3832-438e-9b44-54c3df28ffdf","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-09 11:38:22 - demo - INFO - [demo.py:64] - [2025-08-09 11:38:22] [deduction.py:67] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer e3f65334-bb1d-4a79-9115-c0047c9e241c', 'X-timestamp': '1754710702123', 'X-requestId': '907a75c7cda54edd808521348c69366b', 'X-signature': 'Wqn2KMJk/f4b00SET8GiwAw8cY/tF0pb+fvu2gsXfAE='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-11 14:39:49 - demo - INFO - [demo.py:64] - [2025-08-11 14:39:49] [demo.py:132] 状态码: 200
+2025-08-11 14:39:49 - demo - INFO - [demo.py:64] - [2025-08-11 14:39:49] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-11 14:39:49 - demo - INFO - [demo.py:64] - [2025-08-11 14:39:49] [deduction.py:92] **************************************************获取验证码成功**************************************************
+2025-08-11 14:39:49 - demo - INFO - [demo.py:64] - [2025-08-11 14:39:49] [demo.py:145] 状态码: 200
+2025-08-11 14:39:49 - demo - INFO - [demo.py:64] - [2025-08-11 14:39:49] [demo.py:146] 响应内容: {"access_token":"bcaa87a8-a990-4477-92fe-185ceb8f865b","token_type":"bearer","refresh_token":"75b54bd9-619a-4590-8240-fd1c07a9e901","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-11 14:39:49 - demo - INFO - [demo.py:64] - [2025-08-11 14:39:49] [deduction.py:67] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer bcaa87a8-a990-4477-92fe-185ceb8f865b', 'X-timestamp': '1754894389926', 'X-requestId': 'c9a060232a96496a8bf27c4e26ef0eba', 'X-signature': 'momG4uG5ASzzi02YT0QvteoHpvmwZVgmQ78AH4fSets='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-11 15:36:21 - demo - INFO - [demo.py:64] - [2025-08-11 15:36:21] [demo.py:132] 状态码: 200
+2025-08-11 15:36:21 - demo - INFO - [demo.py:64] - [2025-08-11 15:36:21] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-11 15:36:21 - demo - INFO - [demo.py:64] - [2025-08-11 15:36:21] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-11 15:36:21 - demo - INFO - [demo.py:64] - [2025-08-11 15:36:21] [demo.py:145] 状态码: 200
+2025-08-11 15:36:21 - demo - INFO - [demo.py:64] - [2025-08-11 15:36:21] [demo.py:146] 响应内容: {"access_token":"5dc1be7d-e483-4a29-9f78-2a92867791fc","token_type":"bearer","refresh_token":"9222193e-918f-4a84-bbeb-4707d28edb2f","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-11 15:36:21 - demo - INFO - [demo.py:64] - [2025-08-11 15:36:21] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1754897781339|1754092805389819906
+2025-08-11 15:36:21 - demo - INFO - [demo.py:64] - [2025-08-11 15:36:21] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 5dc1be7d-e483-4a29-9f78-2a92867791fc', 'X-timestamp': '1754897781339', 'X-requestId': '218bc42a3ffe489ba708de49aaf58b29', 'X-signature': 'tRYebZn5WEwtQsqWMqct5v/RB2NMuNFxV/Cen7s8MJM='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-11 15:43:35 - demo - INFO - [demo.py:64] - [2025-08-11 15:43:35] [demo.py:132] 状态码: 200
+2025-08-11 15:43:35 - demo - INFO - [demo.py:64] - [2025-08-11 15:43:35] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-11 15:43:35 - demo - INFO - [demo.py:64] - [2025-08-11 15:43:35] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-11 15:43:36 - demo - INFO - [demo.py:64] - [2025-08-11 15:43:36] [demo.py:145] 状态码: 200
+2025-08-11 15:43:36 - demo - INFO - [demo.py:64] - [2025-08-11 15:43:36] [demo.py:146] 响应内容: {"access_token":"d5b58fce-5464-4646-9025-ad21f08f8292","token_type":"bearer","refresh_token":"14455155-078c-4077-a2da-eef51f9e116d","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-11 15:43:36 - demo - INFO - [demo.py:64] - [2025-08-11 15:43:36] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1754898216044|1754092805389819906
+2025-08-11 15:43:36 - demo - INFO - [demo.py:64] - [2025-08-11 15:43:36] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer d5b58fce-5464-4646-9025-ad21f08f8292', 'X-timestamp': '1754898216044', 'X-requestId': '1690c7a617c84f06b041418aac3d6a2a', 'X-signature': 'SK1OF2zfd9QPPx2ir2QdoIFc8KKgP+g0ObynvcGDVqU='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-12 16:27:19 - demo - INFO - [demo.py:64] - [2025-08-12 16:27:19] [demo.py:132] 状态码: 200
+2025-08-12 16:27:19 - demo - INFO - [demo.py:64] - [2025-08-12 16:27:19] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-12 16:27:19 - demo - INFO - [demo.py:64] - [2025-08-12 16:27:19] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-12 16:27:19 - demo - INFO - [demo.py:64] - [2025-08-12 16:27:19] [demo.py:145] 状态码: 200
+2025-08-12 16:27:19 - demo - INFO - [demo.py:64] - [2025-08-12 16:27:19] [demo.py:146] 响应内容: {"access_token":"bb9888a0-e4d7-4ddb-b1bd-8081b906f1f5","token_type":"bearer","refresh_token":"603ab036-7fb6-41d7-a6ae-8b043bb7b3f4","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-12 16:27:19 - demo - INFO - [demo.py:64] - [2025-08-12 16:27:19] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1754987239904|1754092805389819906
+2025-08-12 16:27:19 - demo - INFO - [demo.py:64] - [2025-08-12 16:27:19] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer bb9888a0-e4d7-4ddb-b1bd-8081b906f1f5', 'X-timestamp': '1754987239904', 'X-requestId': 'eb342d8b25c7498eb1d7c5eed339f857', 'X-signature': 'o3vfzLUWZaTcw4f0uV1guoVu1j3ntdtcWegNhoDOf4Q='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-12 21:09:34 - demo - INFO - [demo.py:64] - [2025-08-12 21:09:34] [demo.py:132] 状态码: 200
+2025-08-12 21:09:34 - demo - INFO - [demo.py:64] - [2025-08-12 21:09:34] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-12 21:09:34 - demo - INFO - [demo.py:64] - [2025-08-12 21:09:34] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-12 21:09:34 - demo - INFO - [demo.py:64] - [2025-08-12 21:09:34] [demo.py:145] 状态码: 200
+2025-08-12 21:09:34 - demo - INFO - [demo.py:64] - [2025-08-12 21:09:34] [demo.py:146] 响应内容: {"access_token":"0ad10e3e-01df-4e0c-98c9-a098a712999b","token_type":"bearer","refresh_token":"40911c52-c14d-4742-9e28-236569f333d4","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-12 21:09:34 - demo - INFO - [demo.py:64] - [2025-08-12 21:09:34] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1755004174523|1754092805389819906
+2025-08-12 21:09:34 - demo - INFO - [demo.py:64] - [2025-08-12 21:09:34] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 0ad10e3e-01df-4e0c-98c9-a098a712999b', 'X-timestamp': '1755004174523', 'X-requestId': '4c9ed39a6cbf453c8c97b86d16a2ebe5', 'X-signature': 'kg9oC+pSzAfMiYECbXqaHimTxgo65S6cIwC5ncf4UBI='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-12 22:07:16 - demo - INFO - [demo.py:64] - [2025-08-12 22:07:16] [demo.py:132] 状态码: 200
+2025-08-12 22:07:16 - demo - INFO - [demo.py:64] - [2025-08-12 22:07:16] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-12 22:07:16 - demo - INFO - [demo.py:64] - [2025-08-12 22:07:16] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-12 22:07:16 - demo - INFO - [demo.py:64] - [2025-08-12 22:07:16] [demo.py:145] 状态码: 200
+2025-08-12 22:07:16 - demo - INFO - [demo.py:64] - [2025-08-12 22:07:16] [demo.py:146] 响应内容: {"access_token":"11015c09-ab7e-48e8-badc-74404c23615d","token_type":"bearer","refresh_token":"03723bdd-c35d-43d0-a33f-0fc7ec3b8ce8","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-12 22:07:16 - demo - INFO - [demo.py:64] - [2025-08-12 22:07:16] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1755007636656|1754092805389819906
+2025-08-12 22:07:16 - demo - INFO - [demo.py:64] - [2025-08-12 22:07:16] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 11015c09-ab7e-48e8-badc-74404c23615d', 'X-timestamp': '1755007636656', 'X-requestId': '521ec43c0681476aa510d653821ab9f3', 'X-signature': 'RQAbgImgAWwNuF4SnXRqWgVi9D5jI3swMWIAN8VUQeQ='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-13 05:42:58 - demo - INFO - [demo.py:64] - [2025-08-13 05:42:58] [demo.py:132] 状态码: 200
+2025-08-13 05:42:58 - demo - INFO - [demo.py:64] - [2025-08-13 05:42:58] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 05:42:58 - demo - INFO - [demo.py:64] - [2025-08-13 05:42:58] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-13 05:42:58 - demo - INFO - [demo.py:64] - [2025-08-13 05:42:58] [demo.py:145] 状态码: 200
+2025-08-13 05:42:58 - demo - INFO - [demo.py:64] - [2025-08-13 05:42:58] [demo.py:146] 响应内容: {"access_token":"d8e6e88e-795d-4e1e-9c45-202d8a385ff0","token_type":"bearer","refresh_token":"820a8a49-08b9-4f39-800d-ca0d32e26bc6","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 05:42:58 - demo - INFO - [demo.py:64] - [2025-08-13 05:42:58] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1755034978328|1754092805389819906
+2025-08-13 05:42:58 - demo - INFO - [demo.py:64] - [2025-08-13 05:42:58] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer d8e6e88e-795d-4e1e-9c45-202d8a385ff0', 'X-timestamp': '1755034978328', 'X-requestId': '71a1fa08bc6b4245b334cd1e9fe41d53', 'X-signature': 'ibE2URqREth3cd0PFe65l5YTISsLWMcXzCASI4XssN4='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-13 06:36:09 - demo - INFO - [demo.py:64] - [2025-08-13 06:36:09] [demo.py:132] 状态码: 200
+2025-08-13 06:36:09 - demo - INFO - [demo.py:64] - [2025-08-13 06:36:09] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 06:36:09 - demo - INFO - [demo.py:64] - [2025-08-13 06:36:09] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-13 06:36:09 - demo - INFO - [demo.py:64] - [2025-08-13 06:36:09] [demo.py:145] 状态码: 200
+2025-08-13 06:36:09 - demo - INFO - [demo.py:64] - [2025-08-13 06:36:09] [demo.py:146] 响应内容: {"access_token":"24ff77fb-d1f8-4ac1-9306-11a3da108754","token_type":"bearer","refresh_token":"8a1741eb-9e1d-4689-86ca-72fa58a67111","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 06:36:09 - demo - INFO - [demo.py:64] - [2025-08-13 06:36:09] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1755038169097|1754092805389819906
+2025-08-13 06:36:09 - demo - INFO - [demo.py:64] - [2025-08-13 06:36:09] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 24ff77fb-d1f8-4ac1-9306-11a3da108754', 'X-timestamp': '1755038169097', 'X-requestId': '4a4abf8c691d4d549d150d5346ad424f', 'X-signature': '9FD+Kv5EazNQEyrH15m8mckbGPvrZV561At6dGuUdhI='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:132] 状态码: 200
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:133] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:989] **************************************************获取验证码成功**************************************************
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:145] 状态码: 200
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:146] 响应内容: {"access_token":"2b2be01e-040a-4d9a-b941-95435950b53c","token_type":"bearer","refresh_token":"a865f8c7-3c59-437a-bf7a-60f5c119988e","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:732] 检查登录状态请求状态码: 424
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:733] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 09:16:31 - demo - INFO - [demo.py:64] - [2025-08-13 09:16:31] [demo.py:738] 您的账号在其他地方登录。
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:133] 状态码: 200
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:990] **************************************************获取验证码成功**************************************************
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:146] 状态码: 200
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:147] 响应内容: {"access_token":"72288e0e-8285-43f1-a9fa-a37545544dde","token_type":"bearer","refresh_token":"61c1a2c2-b5bd-43a7-a06f-2e1141e40769","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:733] 检查登录状态请求状态码: 424
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:734] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 09:17:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:17:53] [demo.py:739] 您的账号在其他地方登录。
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:133] 状态码: 200
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:991] **************************************************获取验证码成功**************************************************
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:147] 状态码: 200
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:148] 响应内容: {"access_token":"49e3ba15-0282-4bbf-929f-1387f55fb75b","token_type":"bearer","refresh_token":"c7852ca7-0402-4fbe-94cf-ec8caf67ca24","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:734] 检查登录状态请求状态码: 424
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:735] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 09:18:50 - demo - INFO - [demo.py:64] - [2025-08-13 09:18:50] [demo.py:740] 您的账号在其他地方登录。
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:133] 状态码: 200
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:992] **************************************************获取验证码成功**************************************************
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:147] 状态码: 200
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:148] 响应内容: {"access_token":"f76ae149-05ee-46b4-83fa-21324d43f8e0","token_type":"bearer","refresh_token":"6951f321-9862-4849-ae8f-4981f147bb34","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:734] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=f76ae149-05ee-46b4-83fa-21324d43f8e0
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:735] 检查登录状态请求状态码: 424
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:736] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 09:21:18 - demo - INFO - [demo.py:64] - [2025-08-13 09:21:18] [demo.py:741] 您的账号在其他地方登录。
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:133] 状态码: 200
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:993] **************************************************获取验证码成功**************************************************
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:147] 状态码: 200
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:148] 响应内容: {"access_token":"022d0eac-386d-4da9-ab0d-8c767475e3e9","token_type":"bearer","refresh_token":"cb74093c-c601-4c56-96f3-8ad1a44716e1","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:734] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=022d0eac-386d-4da9-ab0d-8c767475e3e9
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:735] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Bearer 022d0eac-386d-4da9-ab0d-8c767475e3e9'}
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:736] 检查登录状态请求状态码: 424
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:737] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 09:30:48 - demo - INFO - [demo.py:64] - [2025-08-13 09:30:48] [demo.py:742] 您的账号在其他地方登录。
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:133] 状态码: 200
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:994] **************************************************获取验证码成功**************************************************
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:147] 状态码: 200
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:148] 响应内容: {"access_token":"85ab83e4-0680-4916-8fd0-83765d43ca77","token_type":"bearer","refresh_token":"5bfa305a-6e15-4037-860f-36ddd1a98067","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:735] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=85ab83e4-0680-4916-8fd0-83765d43ca77
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:736] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': '85ab83e4-0680-4916-8fd0-83765d43ca77'}
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:737] 检查登录状态请求状态码: 424
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:738] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 09:31:43 - demo - INFO - [demo.py:64] - [2025-08-13 09:31:43] [demo.py:743] 您的账号在其他地方登录。
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:133] 状态码: 200
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:148] 状态码: 200
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:149] 响应内容: {"access_token":"cc3b43ad-97d9-4694-85fc-a2f12910cd7b","token_type":"bearer","refresh_token":"522e65ac-540a-4653-a8d2-e2b25a9aaf0f","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:736] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=cc3b43ad-97d9-4694-85fc-a2f12910cd7b
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:737] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Bearer cc3b43ad-97d9-4694-85fc-a2f12910cd7b'}
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:738] 检查登录状态请求状态码: 424
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:739] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 09:32:53 - demo - INFO - [demo.py:64] - [2025-08-13 09:32:53] [demo.py:744] 您的账号在其他地方登录。
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:133] 状态码: 200
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:148] 状态码: 200
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:149] 响应内容: {"access_token":"745b4596-8d62-43a7-97e5-55d8653764fb","token_type":"bearer","refresh_token":"5bd50bb0-7dd0-4db7-aef9-19ea5c8f4c01","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:736] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=745b4596-8d62-43a7-97e5-55d8653764fb
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:737] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:738] 检查登录状态请求状态码: 200
+2025-08-13 09:33:44 - demo - INFO - [demo.py:64] - [2025-08-13 09:33:44] [demo.py:739] 检查登录状态响应内容: {"license":"made by supermall","user_id":"1754092805389819906","user_name":"U13500003000","scope":["server"],"active":true,"exp":"1757640825","authorities":["ROLE_2"],"client_id":"pig","username":"U13500003000"}
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [demo.py:133] 状态码: 200
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [deduction.py:93] **************************************************获取验证码成功**************************************************
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [demo.py:148] 状态码: 200
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [demo.py:149] 响应内容: {"access_token":"b9b0e638-a816-4672-b937-04823365a69c","token_type":"bearer","refresh_token":"a4d6885c-370e-4954-8226-891bc02dbdcd","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [deduction.py:54] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1755049879150|1754092805389819906
+2025-08-13 09:51:19 - demo - INFO - [demo.py:64] - [2025-08-13 09:51:19] [deduction.py:68] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer b9b0e638-a816-4672-b937-04823365a69c', 'X-timestamp': '1755049879150', 'X-requestId': 'c17f5190d2054dd48e3e8f309063082e', 'X-signature': 'VC1MnUMkOaDbRrq7xIBhqAGWo+raKYctAEUw4FGECwU='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [demo.py:133] 状态码: 200
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [deduction.py:96] **************************************************获取验证码成功**************************************************
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [demo.py:148] 状态码: 200
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [demo.py:149] 响应内容: {"access_token":"755493de-a825-448f-a63d-7d4348ce84c7","token_type":"bearer","refresh_token":"af1cdbe2-1e01-4afb-9a10-ee17c5c4e0e3","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [deduction.py:57] s_message: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}|1755051527818|1754092805389819906
+2025-08-13 10:18:47 - demo - INFO - [demo.py:64] - [2025-08-13 10:18:47] [deduction.py:71] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 755493de-a825-448f-a63d-7d4348ce84c7', 'X-timestamp': '1755051527818', 'X-requestId': '8949276e9e2f4f13803a0f031f20467f', 'X-signature': 'sAE0hQLDGaOrSsFko5YPRIEKj8cQNp7XUtVIBeN7piU='}, data: {"deducteList": [{"deductionType": 2, "billPrice": 0.3, "sourceId": 1939613403762253825, "reduceCount": 1, "clotheId": 0}]}
+2025-08-13 10:22:25 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:25] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 10:22:25 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:25] [demo.py:133] 状态码: 200
+2025-08-13 10:22:25 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:25] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 10:22:25 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:25] [deduction.py:100] **************************************************获取验证码成功**************************************************
+2025-08-13 10:22:26 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:26] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 10:22:26 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:26] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:22:26 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:26] [demo.py:148] 状态码: 200
+2025-08-13 10:22:26 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:26] [demo.py:149] 响应内容: {"access_token":"8fcc3c85-976d-4617-9e41-60b6e4374ce2","token_type":"bearer","refresh_token":"f4d03159-2149-4a3e-9179-53537023baa2","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 10:22:26 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:26] [deduction.py:59] s_message: {"deducteList":[{"deductionType":2,"billPrice":0.3,"sourceId":1939613403762253825,"reduceCount":1,"clotheId":0}]}|1755051746024|1754092805389819906
+2025-08-13 10:22:26 - demo - INFO - [demo.py:64] - [2025-08-13 10:22:26] [deduction.py:74] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 8fcc3c85-976d-4617-9e41-60b6e4374ce2', 'X-timestamp': '1755051746024', 'X-requestId': 'ae4b54ed9fc943e5ae9aa70c69b61c4d', 'X-signature': 'LvoSMlpZVYkkANbOHxv0hH1rLTHlfv+nDZU0T0B4S+w='}, data: {"deducteList":[{"deductionType":2,"billPrice":0.3,"sourceId":1939613403762253825,"reduceCount":1,"clotheId":0}]}
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [demo.py:133] 状态码: 200
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [deduction.py:100] **************************************************获取验证码成功**************************************************
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [demo.py:148] 状态码: 200
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [demo.py:149] 响应内容: {"access_token":"a93335c0-432d-4adf-adb3-5fe9d181550f","token_type":"bearer","refresh_token":"aac192a1-ee5f-4b2a-a13a-2620eb60f783","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [deduction.py:59] s_message: {"deducteList":[{"deductionType":2,"billPrice":0.3,"sourceId":1939613403762253825,"reduceCount":1,"clotheId":0}]}|1755052228295|1754092805389819906
+2025-08-13 10:30:28 - demo - INFO - [demo.py:64] - [2025-08-13 10:30:28] [deduction.py:74] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer a93335c0-432d-4adf-adb3-5fe9d181550f', 'X-timestamp': '1755052228295', 'X-requestId': 'e6df8a1c9f3445f6a82bf0500d7a95e4', 'X-signature': '5AIGC2USNR3KECNDro0cSzi3ECDRUigsxDFB25K8lZk='}, data: {"deducteList":[{"deductionType":2,"billPrice":0.3,"sourceId":1939613403762253825,"reduceCount":1,"clotheId":0}]}
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [demo.py:133] 状态码: 200
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [deduction.py:100] **************************************************获取验证码成功**************************************************
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [demo.py:148] 状态码: 200
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [demo.py:149] 响应内容: {"access_token":"03abc716-758d-406d-a63e-50f314a6afd7","token_type":"bearer","refresh_token":"12de7bcb-53cf-4b32-8f2d-4686d5a2eed4","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [deduction.py:59] s_message: {"deducteList":[{"deductionType":2,"billPrice":0.3,"sourceId":1939613403762253825,"reduceCount":1,"clotheId":0}]}|1755052282418|1754092805389819906
+2025-08-13 10:31:22 - demo - INFO - [demo.py:64] - [2025-08-13 10:31:22] [deduction.py:74] url: http://180.184.140.234:9999/admin/balance/deduction, headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer 03abc716-758d-406d-a63e-50f314a6afd7', 'X-timestamp': '1755052282418', 'X-requestId': '8543f558e67f4a77b93ddeb0c98f8fef', 'X-signature': 'JTkSWwcuVIw+YNaGco7XdJ7IwWZHZOtfyajHdFqTOdY='}, data: {"deducteList":[{"deductionType":2,"billPrice":0.3,"sourceId":1939613403762253825,"reduceCount":1,"clotheId":0}]}
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:133] 状态码: 200
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:148] 状态码: 200
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:149] 响应内容: {"access_token":"47db3995-f387-475b-8ed9-d6a5416ca1af","token_type":"bearer","refresh_token":"a5e129c8-acc7-4776-ac7e-952103d6e7d8","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:736] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=47db3995-f387-475b-8ed9-d6a5416ca1af
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:737] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Bearer 47db3995-f387-475b-8ed9-d6a5416ca1af'}
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:738] 检查登录状态请求状态码: 424
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:739] 检查登录状态响应内容: {"code":1,"msg":"token 过期","data":"Full authentication is required to access this resource"}
+2025-08-13 10:32:36 - demo - INFO - [demo.py:64] - [2025-08-13 10:32:36] [demo.py:744] 您的账号在其他地方登录。
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:133] 状态码: 200
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:148] 状态码: 200
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:149] 响应内容: {"access_token":"6d6b62a9-ae3c-4085-9049-330466f3cce2","token_type":"bearer","refresh_token":"e9553f2f-9920-43a1-a711-3132b954c29c","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:736] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=6d6b62a9-ae3c-4085-9049-330466f3cce2
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:737] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:738] 检查登录状态请求状态码: 200
+2025-08-13 10:34:45 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:45] [demo.py:739] 检查登录状态响应内容: {"license":"made by supermall","user_id":"1754092805389819906","user_name":"U13500003000","scope":["server"],"active":true,"exp":"1757644487","authorities":["ROLE_2"],"client_id":"pig","username":"U13500003000"}
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:133] 状态码: 200
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:148] 状态码: 200
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:149] 响应内容: {"access_token":"c81222ea-e229-4419-9b70-22142788c005","token_type":"bearer","refresh_token":"020b19fb-732f-43ee-9682-e062678362ca","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:736] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=c81222ea-e229-4419-9b70-22142788c005
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:737] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:738] 检查登录状态请求状态码: 200
+2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:739] 检查登录状态响应内容: {"license":"made by supermall","user_id":"1754092805389819906","user_name":"U13500003000","scope":["server"],"active":true,"exp":"1757644493","authorities":["ROLE_2"],"client_id":"pig","username":"U13500003000"}

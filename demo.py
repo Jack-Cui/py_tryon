@@ -129,6 +129,7 @@ def get_verify_code():
         'Content-Type': 'application/json',
     }
     response = requests.get(url, headers=headers)
+    log_info(f"调用获取验证码接口: {url}")
     log_info(f"状态码: {response.status_code}")
     log_info(f"响应内容: {response.text}")
     return response
@@ -142,6 +143,8 @@ def send_token_request():
         "Authorization": "Basic cGlnOnBpZw=="
     }
     response = requests.post(url, headers=headers)
+    log_info(f"调用登录接口: {url}")
+    log_info(f"调用登录接口，headers参数: {headers}")
     log_info(f"状态码: {response.status_code}")
     log_info(f"响应内容: {response.text}")
     return response.json()
@@ -725,10 +728,13 @@ def check_login(access_token):
     url = endpoint + f"/admin/oauth/check_token?token=" + access_token
     headers = {
         'Content-Type': 'application/json',
-        "Authorization": f"Bearer {access_token}"
+        # "Authorization": f"Bearer {access_token}"
+        "Authorization": f"Basic cGlnOnBpZw=="
     }
     try:
         response = requests.get(url, headers=headers)
+        log_info(f"调用检查登录状态接口: {url}")
+        log_info(f"调用检查登录状态接口,header参数: {headers}")
         log_info(f"检查登录状态请求状态码: {response.status_code}")
         log_info(f"检查登录状态响应内容: {response.text}")
         
@@ -751,9 +757,21 @@ def check_login(access_token):
 
 def balance_deduction(access_token, user_id, room_id):
     url = endpoint + "/admin/balance/deduction"
+
+    rand = random.randint(10000000, 99999999)
+    ts = int(time.time())
+    # url = url % (rand, ts)
+    log_info(f"url= {url}")
+    secretkey = "nDQ5EVbQUiDSYpOz"
+    # 生成签名
+    sign = signature.make_sha256_signature(rand, ts, secretkey)
+    log_info(f"Generated Signature: {sign}")
+    # 添加自定义 Header
     headers = {
         'Content-Type': 'application/json',
-        "Authorization": f"Bearer {access_token}"
+        # "Authorization": f"Bearer {access_token}",
+        "X-SHA-Signature": sign,
+        # "X-signature": sign
     }
     data = {
         'deductionType': 2,
@@ -764,7 +782,7 @@ def balance_deduction(access_token, user_id, room_id):
         'reduceCount': 1
     }
     try:
-        log_info(f"url:{url}, 请求内容:{json.dumps(data)}")
+        log_info(f"header:{headers}, url:{url}, 请求内容:{json.dumps(data)}")
         response = requests.post(url, headers=headers, json=data)
         log_info(f"扣款请求状态码: {response.status_code}")
         # print(f"房间数据响应内容: {response.text}")
