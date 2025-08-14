@@ -1008,15 +1008,15 @@ if __name__ == "__main__":
     # log_info(f'clothe_detail: {clothe_detail}')
     # sys.exit(0)
 
-    check_login(access_token)
-    sys.exit(1)
+    # check_login(access_token)
+    # sys.exit(1)
 
-    account = int(res['user_id'])
-    log_info(f"access_token: {access_token}, uid={account}")
-    log_info("*" * 50 + "发送token成功" + "*" * 50)
+    # account = int(res['user_id'])
+    # log_info(f"access_token: {access_token}, uid={account}")
+    # log_info("*" * 50 + "发送token成功" + "*" * 50)
 
-    balance_deduction(access_token, account, 1939613403762253825)
-    sys.exit(1)
+    # balance_deduction(access_token, account, 1939613403762253825)
+    # sys.exit(1)
 
     room_info = get_sysroomshare(co_creation_id, access_token)
     log_info("*" * 50 + "获取房间信息成功" + "*" * 50)

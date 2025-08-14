@@ -477,3 +477,145 @@
 2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:737] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Basic cGlnOnBpZw=='}
 2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:738] 检查登录状态请求状态码: 200
 2025-08-13 10:34:52 - demo - INFO - [demo.py:64] - [2025-08-13 10:34:52] [demo.py:739] 检查登录状态响应内容: {"license":"made by supermall","user_id":"1754092805389819906","user_name":"U13500003000","scope":["server"],"active":true,"exp":"1757644493","authorities":["ROLE_2"],"client_id":"pig","username":"U13500003000"}
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:133] 状态码: 200
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:148] 状态码: 200
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:149] 响应内容: {"access_token":"b6fd6135-e904-496a-b8a1-8d5b127a843d","token_type":"bearer","refresh_token":"ad58db3d-8632-4eaa-85ab-e954ea737afe","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:736] 调用检查登录状态接口: http://180.184.140.234:9999/admin/oauth/check_token?token=b6fd6135-e904-496a-b8a1-8d5b127a843d
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:737] 调用检查登录状态接口,header参数: {'Content-Type': 'application/json', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:738] 检查登录状态请求状态码: 200
+2025-08-14 15:44:05 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:05] [demo.py:739] 检查登录状态响应内容: {"license":"made by supermall","user_id":"1754092805389819906","user_name":"U13500003000","scope":["server"],"active":true,"exp":"1757749446","authorities":["ROLE_2"],"client_id":"pig","username":"U13500003000"}
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:133] 状态码: 200
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:148] 状态码: 200
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:149] 响应内容: {"access_token":"1c4e48d3-c29e-4a7e-a83a-36a3cf071be9","token_type":"bearer","refresh_token":"8ea25f15-517f-42a9-ae09-07bcda23b3d5","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:1015] access_token: 1c4e48d3-c29e-4a7e-a83a-36a3cf071be9, uid=1754092805389819906
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:1016] **************************************************发送token成功**************************************************
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:764] url= http://180.184.140.234:9999/admin/balance/deduction
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:768] Generated Signature: 201ec371b96aebe8fd69efe9dc9717f864968e4330f63206209c42501cbdd2d0
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:785] header:{'Content-Type': 'application/json', 'X-SHA-Signature': '201ec371b96aebe8fd69efe9dc9717f864968e4330f63206209c42501cbdd2d0'}, url:http://180.184.140.234:9999/admin/balance/deduction, 请求内容:{"deductionType": 2, "count": 1, "billPrice": 0.3, "sourceId": 1939613403762253825, "userId": 1754092805389819906, "reduceCount": 1}
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:787] 扣款请求状态码: 424
+2025-08-14 15:44:48 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:48] [demo.py:793] 请求失败，状态码: 424
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:132] 调用获取验证码接口: http://180.184.140.234:9999/admin/mobile/13500003000
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:133] 状态码: 200
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:134] 响应内容: {"code":0,"msg":"验证码发送成功","data":true}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:995] **************************************************获取验证码成功**************************************************
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:146] 调用登录接口: http://180.184.140.234:9999/admin/oauth/token?mobile=SMS@13500003000&code=8888&grant_type=mobile
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:147] 调用登录接口，headers参数: {'Content-Type': 'application/x-www-form-urlencoded', 'isToken': 'false', 'TENANT-ID': '1', 'Authorization': 'Basic cGlnOnBpZw=='}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:148] 状态码: 200
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:149] 响应内容: {"access_token":"3a527069-b517-42bf-a470-f49614603256","token_type":"bearer","refresh_token":"f6b53089-22d5-4c0b-8f6b-d06b5443c13d","expires_in":2591999,"scope":"server","license":"made by supermall","active":true,"user_id":"1754092805389819906","client_id":"pig","username":"U13500003000"}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:711] 房间数据请求状态码: 200
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:712] 房间数据响应内容: {"code":0,"msg":null,"data":{"id":"2","roomId":"1939613403762253825","userId":"1783127211999875074","clothId":"1916394257281036290;0;0","actionId":"303","scenarioId":"1893341767539187717","user2Id":null,"cloth2Id":null,"action2Id":null,"scenario2Id":null,"startT":"1","endT":"15","startT2":null,"endT2":null,"state":"0","extra1":"共创测试","extra2":"https://admins3.tos-cn-shanghai.volces.com/1783115976386400257_20250620141942.mp4","extra3":null,"createTime":null,"createBy":"","updateTime":null,"updateBy":"","tenantId":null,"clothesSize":null,"clothesSize2":null,"name":"U13500009012","avatar":"https://admins3.tos-cn-shanghai.volces.com/280a1cf845fc4dfcaa6299e735eeaa5f.png","name2":null,"avatar2":null}}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:1022] **************************************************获取房间信息成功**************************************************
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:871] 获取衣服尺寸数据请求状态码: 200
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:872] 获取衣服尺寸数据响应内容: {"code":0,"msg":null,"data":"M"}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:906] clothe_id; 1916394257281036290, clothe_size: 4
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:906] clothe_id; 0, clothe_size: 0
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:906] clothe_id; 0, clothe_size: 0
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:945] enter_stage_info: {'AvatarId': 0, 'UserId': '1783127211999875074', 'MapName': 'Maps_jiaotang', 'Garments': {'Garment1Id': '1916394257281036290', 'Garment1Size': 4, 'Garment2Id': '0', 'Garment2Size': 0, 'Garment3Id': '0', 'Garment3Size': 0}, 'Animation': None, 'Camera': True, 'Voice': False, 'Size': 4, 'isControl': True, 'startTime': 0, 'endTime': 0}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:1027] **************************************************构建登台信息成功**************************************************
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:157] url= http://dev_gw.ai1010.cn/alloc/room_inst?rand=46319863&ts=1755157497
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:161] Generated Signature: 8c711d780baf19a403e62c637fe5d1224d4f9648547f16bbbbe37bb4c4aa2845
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:182] Status Code: 200
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:183] Response Body:
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:184] {"code":0,"message":"","data":{"inst_acc_info":{"inst_id":6,"mobile_ip_v4":"14.103.233.227","mobile_ip_v6":"","telecom_ip_v4":"","telecom_ip_v6":"","unicom_ip_v4":"","unicom_ip_v6":"","x_port":20001,"ws_url":"dev_wss.ai1010.cn/w6","token":"bc69fdee-1a4b-43a0-b882-9053e73e1263"}}}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:194] token=bc69fdee-1a4b-43a0-b882-9053e73e1263
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:195] ws_url=dev_wss.ai1010.cn/w6
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:1046] insToken: bc69fdee-1a4b-43a0-b882-9053e73e1263, user_id: 1754092805389819906, room_id: 1939613403762253825
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:202] 连接WebSocket: wss://dev_wss.ai1010.cn/w6
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:220] WebSocket连接建立，心跳任务已启动
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:228] 登录请求参数: uid: 1754092805389819906, token: 3a527069-b517-42bf-a470-f49614603256, insToken: bc69fdee-1a4b-43a0-b882-9053e73e1263
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:246] 已发送登录请求 (92 字节)
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:116] 已发送心跳请求 (13 字节), timestamp: 1755157497271
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:251] 收到原始响应: b'\x08\x00\x00\x00M\x04\x08\x01'...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:259] 响应消息ID: 1101, 长度: 8
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:265] 登录响应: 1
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:268] 登录结果: SUCCESS
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:272] 登录成功，准备进入房间...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:332] 已发送进入房间请求 (16 字节), roomId: 1939613403762253825
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:343] 收到进入房间原始响应: b'\r\x00\x00\x00W\x04\x08\xb7\x8b\xa8\xbc\x8a3'...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:350] 进入房间响应消息ID: 1111, 长度: 13
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:392] 收到心跳响应: timestamp=1755157497271
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:343] 收到进入房间原始响应: b'9\x01\x00\x00\xb1\x04\x08\x01\x10\x81\xc0\xd7\xe6\xd3\x83\xb9\xf5\x1a\x1a\t\x82\xc0\xd0\xc2\xce\xc3\xf2\xab\x18"\xbf\x01001643e46acb15c24012c963951VgC1ZQAA+5OdaBuwnWgTADE5Mzk2MTM0MDM3NjIyN'...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:350] 进入房间响应消息ID: 1201, 长度: 313
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:356] 进入房间响应: 1, roomId: 1939613403762253825
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:359] 进入房间结果: SUCCESS
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:362] 成功进入房间: 1939613403762253825
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:363] 在线用户数量: 1
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:364] 舞台数量: 1
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:365] 场景: 
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:366] 全员禁言: False
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:368] 在线用户: [1754092805389819906]
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:370] 舞台信息: [, stageId: 1
+, stageId: 2
+, stageId: 3
+, stageId: 4
+, stageId: 5
+]
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:377] 准备发送登台请求...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:412] 登台信息: {"AvatarId": 0, "UserId": "1783127211999875074", "MapName": "Maps_jiaotang", "Garments": {"Garment1Id": "1916394257281036290", "Garment1Size": 4, "Garment2Id": "0", "Garment2Size": 0, "Garment3Id": "0", "Garment3Size": 0}, "Animation": null, "Camera": true, "Voice": false, "Size": 4, "isControl": true, "startTime": 0, "endTime": 0}
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:433] 已发送登台请求 (342 字节)
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:446] 收到消息原始响应: b':\x01\x00\x00\xe1\x05 \x01*\xd9\x01\x10\x82\xc0\xd0\xc2\xce\xc3\xf2\xab\x18\x1a\xbf\x01001643e46acb15c24012c963951VgC1ZQAA+5OdaBuwnWgTADE5Mzk2MTM0MDM3NjIyNTM4MjUTA'...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:453] 响应消息ID: 1505, 长度: 314
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:495] 收到舞台队列信息: 队列类型0, 排队人数0, 舞台数量1
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:499] 台上用户: 6个
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:446] 收到消息原始响应: b'\x12\x00\x00\x00\xf2\x05\x18\x82\xc0\xd0\xc2\xce\xc3\xf2\xab\x18 \x02'...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:453] 响应消息ID: 1522, 长度: 18
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:480] 收到舞台状态变更: 索引0, 舞台ID0, 用户ID1754092805389819906, 状态2
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:484] 舞台状态变更为 TryEnter - 正在尝试上台
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:446] 收到消息原始响应: b'$\x01\x00\x00\xe1\x05 \x01*\xce\x01\x10\x82\xc0\xd0\xc2\xce\xc3\xf2\xab\x18\x1a\xbf\x01001643e46acb15c24012c963951VgC1ZQAA+5OdaBuwnWgTADE5Mzk2MTM0MDM3NjIyNTM4MjUTA'...
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:453] 响应消息ID: 1505, 长度: 292
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:495] 收到舞台队列信息: 队列类型0, 排队人数0, 舞台数量1
+2025-08-14 15:44:57 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:57] [demo.py:499] 台上用户: 6个
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:446] 收到消息原始响应: b'\x12\x00\x00\x00\xdd\x05\x08\x01\x10\x81\xc0\xd7\xe6\xd3\x83\xb9\xf5\x1a'...
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:453] 响应消息ID: 1501, 长度: 18
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:459] 登台响应: 1
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:462] 登台结果: SUCCESS
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:465] 成功登台: 房间ID 1939613403762253825, 舞台ID 0
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:519] enter_stage_success: True, received_stage_change: True
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:527] 登台成功，等待20秒后离开房间...
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:541] 开始等待20秒... (当前时间: 3431969.53)
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:553] 剩余等待时间: 20.0秒
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:558] 等待期间收到消息: b'$\x01\x00\x00\xe1\x05 \x01*\xce\x01\x10\x82\xc0\xd0\xc2\xce\xc3\xf2\xab\x18\x1a\xbf\x01001643e46acb15c24012c96395'...
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:564] 等待期间收到消息ID: 1505, 长度: 292
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:580] 等待期间收到其他消息类型: 1505
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:553] 剩余等待时间: 20.0秒
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:558] 等待期间收到消息: b'\x15\x00\x00\x00U\x04\n\rMaps_jiaotang'...
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:564] 等待期间收到消息ID: 1109, 长度: 21
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:580] 等待期间收到其他消息类型: 1109
+2025-08-14 15:44:58 - demo - INFO - [demo.py:64] - [2025-08-14 15:44:58] [demo.py:553] 剩余等待时间: 19.3秒
+2025-08-14 15:45:00 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:00] [demo.py:553] 剩余等待时间: 17.3秒
+2025-08-14 15:45:02 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:02] [demo.py:553] 剩余等待时间: 15.3秒
+2025-08-14 15:45:04 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:04] [demo.py:553] 剩余等待时间: 13.3秒
+2025-08-14 15:45:06 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:06] [demo.py:553] 剩余等待时间: 11.3秒
+2025-08-14 15:45:07 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:07] [demo.py:116] 已发送心跳请求 (13 字节), timestamp: 1755157507273
+2025-08-14 15:45:07 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:07] [demo.py:558] 等待期间收到消息: b'\r\x00\x00\x00W\x04\x08\xc9\xd9\xa8\xbc\x8a3'...
+2025-08-14 15:45:07 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:07] [demo.py:564] 等待期间收到消息ID: 1111, 长度: 13
+2025-08-14 15:45:07 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:07] [demo.py:578] 等待期间收到心跳响应: timestamp=1755157507273
+2025-08-14 15:45:07 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:07] [demo.py:553] 剩余等待时间: 10.7秒
+2025-08-14 15:45:09 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:09] [demo.py:553] 剩余等待时间: 8.7秒
+2025-08-14 15:45:11 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:11] [demo.py:553] 剩余等待时间: 6.7秒
+2025-08-14 15:45:13 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:13] [demo.py:553] 剩余等待时间: 4.7秒
+2025-08-14 15:45:15 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:15] [demo.py:553] 剩余等待时间: 2.7秒
+2025-08-14 15:45:17 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:17] [demo.py:116] 已发送心跳请求 (13 字节), timestamp: 1755157517276
+2025-08-14 15:45:17 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:17] [demo.py:558] 等待期间收到消息: b'\r\x00\x00\x00W\x04\x08\xdc\xa7\xa9\xbc\x8a3'...
+2025-08-14 15:45:17 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:17] [demo.py:564] 等待期间收到消息ID: 1111, 长度: 13
+2025-08-14 15:45:17 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:17] [demo.py:578] 等待期间收到心跳响应: timestamp=1755157517276
+2025-08-14 15:45:17 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:17] [demo.py:553] 剩余等待时间: 0.7秒
+2025-08-14 15:45:18 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:18] [demo.py:549] 等待时间已到，准备离开房间...
+2025-08-14 15:45:18 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:18] [demo.py:618] 已发送离开房间请求 (16 字节), roomId: 1939613403762253825
+2025-08-14 15:45:18 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:18] [demo.py:622] 收到离开房间原始响应: b'`\x00\x00\x00\xe1\x05 \x01*\x0b(\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01*\r\x08\x01(\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01*\r\x08\x02(\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01*\r\x08\x03(\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01*\r\x08\x04(\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01*\r\x08\x05(\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01'...
+2025-08-14 15:45:18 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:18] [demo.py:629] 离开房间响应消息ID: 1505, 长度: 96
+2025-08-14 15:45:18 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:18] [demo.py:658] 收到舞台队列信息: 队列类型0, 排队人数0, 舞台数量1
+2025-08-14 15:45:18 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:18] [demo.py:662] 台上用户: 6个
+2025-08-14 15:45:18 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:18] [demo.py:294] 停止心跳任务...
+2025-08-14 15:45:20 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:20] [demo.py:122] 心跳任务被取消
+2025-08-14 15:45:20 - demo - INFO - [demo.py:64] - [2025-08-14 15:45:20] [demo.py:1048] **************************************************登台成功**************************************************
